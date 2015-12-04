@@ -1,0 +1,250 @@
+// RESULT PAGE
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// 01. Result HEADER
+// 02. Sidebar --> filters
+// 03. Search Result Content
+// 04. No result txt
+
+
+// 2. Result sidebar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+aside {
+	@include grid-column(3);
+	display: block;
+	@media #{$small-only} {			
+		@include grid-column(12);
+		form {
+			display: none;
+		}
+
+		h4 {
+			text-align: center;
+			padding-bottom: 2rem;
+		}	
+
+	}
+	
+	.cityLlist {
+		list-style: none;
+		margin-left: 0rem;
+		li {
+			color: $aluminum ;
+			i {
+				float: right;
+				color: $ek-red;
+			}
+		}
+	}
+
+
+	.resultFilterList {
+		@include block-grid(1,0.5rem,true);
+	}
+}
+
+.mobileFilterShow {
+	@media #{$small-only} {
+		height: 100% !important;
+		@include grid-column(12);
+		form {
+			display: block !important;
+		}
+	}	
+}
+
+
+
+
+
+// 3.  Search Result Content
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.resultWrapper {
+	@include grid-column(9);
+	@media #{$small-only} {			
+		@include grid-column(12);	
+	}	
+}
+
+
+
+// 2. PROJECT GRID SIZE
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+.ekProjectGrid {
+
+	> li {
+		margin-top:5% !important;
+	}
+
+
+	@media #{$small-only} {			
+		@include block-grid(1);	
+	}
+
+	@media #{$medium-only} {			
+		@include block-grid(2);	
+	}	
+
+	@media #{$large-only} {			
+		@include block-grid(3);	
+	}	
+
+	@media #{$xlarge-only} {			
+		@include block-grid(4);	
+	}
+
+	@media #{$xxlarge-up} {			
+		@include block-grid(4);	
+	}					
+}
+
+// 3. PROJECT PREVIEW
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+.projectPreview2 {
+	@include columnsReset;
+	position: relative;
+	display: block;
+	border: solid 1px $smoke;
+	background: $silver;
+	overflow: hidden;
+
+	
+
+	img {
+		@include single-transition(all, 350ms, ease-in-out);
+		display: block;
+		margin: auto;
+	}
+
+	/* SET DESIGN FOR ADD TO FAVORITES */
+	.addFav {
+		display: block;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		color: $white;
+		font-size: 1.5rem;
+		z-index: 1000;
+	}
+
+	/* CAPTION DESIGN  */
+	figcaption {
+		display: block;
+		@include clearfix;
+		background: white;
+		position: relative;
+		min-height: 13rem;
+		/* DESIGN FOR ICON CATEGORY */
+		.categoryIcon {
+			padding: 1rem .5rem;
+			display: block;
+			text-align: center;
+			font-size: 250%;
+			color: $charcoal ;
+		}
+
+		/* STYLE FOR PROJECT TITLE */
+		h2 {
+			position: relative;
+			display: block;			
+			font-size: $h5-font-size;
+			padding: 0 .5rem;
+			text-align: center;
+			color: $charcoal;
+			line-height: $h4-font-size;
+			max-height: 50px;	
+		}
+
+		/* STYLE FOR PROJECT LOCATION */
+		h3 {
+			position: relative;
+			display: block;
+			color:$base;
+			font-size: .8rem;
+			font-weight: 700;
+			margin: auto;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 1rem;
+			> i {
+				display: inline;
+				font-size: 100%;
+				padding-right: .5rem;
+			}
+		}	
+
+	} 
+	/* END OF FIGAPTION */
+
+	// DESIGN FOR BOTTOM LIST 
+	.projectDataList {
+		@include clearfix;
+		display: block;
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+		width: 100%;		
+		list-style: none;		
+		margin: 2rem 0 0 0 !important;
+		border-top: solid 1px darken($smoke, 10);
+
+		/* STYLES FOR STATS	 */	
+		li {
+			position: relative;
+			padding: .75rem 0; 
+			color: $base ;
+			&:nth-child(n+1) {				
+				@include grid-column(6);
+				border-right: solid 1px darken($smoke, 10);				
+				i {
+					display: block;
+					float: left;
+					font-size: 150%;
+				}
+
+				.projectData {
+					display: block;
+					text-align: center;
+					font-weight: 600;
+				}			
+			}
+			&:nth-child(2) {
+				border-right: none;
+			}			
+		}
+	}
+
+	/* DEFINES HOVER STATES */
+	&:hover {
+		border: solid 1px $gainsboro ;
+		
+		img {
+			@include transform(scale(1.25));
+		}
+
+		h2 {
+			color: $ekleziaPrimary;
+		}
+
+		h3 {
+			color: $charcoal !important;
+		}
+
+		.projectDataList > li {
+			color: $charcoal !important;
+		}
+
+	}
+}
+
+

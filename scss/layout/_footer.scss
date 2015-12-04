@@ -1,0 +1,36 @@
+// EKLEZIA FOOTER
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// 2. footer
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+footer {
+	display: block;
+	@include clearfix;
+	background: $ekleziaPrimary;
+	padding: 2rem 1rem;
+
+	.ek-logo {
+		display: block;
+		margin: 0 auto 1rem;
+	}
+
+	h5 {
+		color: $white;
+	}
+
+
+	p {
+		color: darken($ekleziaPrimary, 35);
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 0rem;
+		
+		li > a {
+			color: $silver;
+			line-height: 175%;
+		}
+	}
+
+}

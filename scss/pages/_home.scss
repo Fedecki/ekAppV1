@@ -1,0 +1,416 @@
+// HOME PAGE DESIGN
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+// 01. Home CLaim Section(1st section)
+// 02. About Section
+// 03. Vote Section
+// 04. Project Discover
+// 05. Eklezia Achievements
+// 06. User 
+// 07. Project Discover
+
+.homeClaim {
+	position: relative;
+	top:0;
+	left: 0;
+	z-index: 1;
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: url(../images/home-bg.jpg) top center no-repeat ;	
+	@include coverBg;
+
+	.homeOverlay {
+		display: block;
+		position: absolute;
+		top:0;
+		bottom:0;
+		width: 100%;
+		height: 100%;
+		background: rgba($ekleziaPrimary, .5);
+	}
+
+
+	.homeDiscover {
+		@media #{$small-only} {			
+			margin-top: 40%;
+		}		
+		@media #{$medium-up} {			
+			@include centre(both);
+		}
+
+
+
+		.ekDiscoverVideo {			
+			display: block;
+			margin: auto;				
+			text-align: center;		
+			@include single-transition(all, 400ms, cubic-bezier(0.7,0,0.3,1) );
+			span {
+				@include single-transition(all,400ms, ease-in-out);
+				margin: auto;
+				padding: .75rem 1.25rem;
+				font-weight: bold;
+				color: $white;
+				letter-spacing: 0.10rem;
+				text-transform: uppercase;
+				border: solid 2px $white;
+				&:hover {
+					background: $white;
+					color: $ekleziaPrimary;
+				}	
+			}
+		}
+	}
+
+	h2,
+	h3,
+	p,
+	a {
+		color:$white;	
+	}
+
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+		font-weight: bold;
+		font-size: $h3-font-size;
+	}
+
+	@media #{$small-only} {
+		h2 {
+			margin-bottom: 1.5rem;
+			font-size: 150%;
+		}
+
+		h3 {
+			font-size: 100%;
+			margin-bottom: 1rem;
+		}
+	}	
+
+	.homeSearchForm {		
+		//@include single-transition(all, 450ms, cubic-bezier(0.3,0,0.3,1) );
+		position: absolute;
+		width: 100%;
+		min-height: 50px !important;
+		bottom: 0 !important;
+		left: 0;
+		visibility: visible;
+		background: $ekleziaPrimary;
+
+		form {
+			display: block;
+			@include clearfix;
+			width: 100% !important;
+			/* @media #{$small-up} {			
+				width: 50%;
+				} */				
+			}
+
+			ul {
+				padding-top: 0rem !important;
+				margin-top: 1.5rem !important;
+				width: 100%;
+				li {
+					margin-bottom: 0rem;
+					padding-bottom: 0;
+					display: block !important;										
+				}
+				.formSearchTile {
+					font-size: 1rem !important;
+					color: $white;
+					text-transform: uppercase;
+					font-weight: 300 !important;
+					letter-spacing: .1rem;
+					line-height: 250%;
+					text-align: center !important;
+					margin-bottom: 1rem;
+				}
+
+				a {
+					display: block;
+				}
+			}
+
+			.closeSearch {
+				@include single-transition;
+				display: block;
+				position: absolute;
+				top: 0.75rem;
+				right: 1rem;
+				font-size: 150%;
+				color: rgba($white, 1);
+				&:hover {
+					cursor: pointer;
+				}				
+			}
+		}
+	}
+
+/* .homeSearchFormExpanded {
+	display: block !important;
+	left: 0% !important;
+}	
+*/
+
+
+
+// 2. About Section
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.homeAbout {
+	display: block;
+	padding: 6rem 0;	
+	position: relative;
+
+	img {
+		display: block;
+		margin: auto;
+	}
+
+	ul {
+
+		@include clearfix;
+		padding-top:2rem;
+		i {
+			display: block;
+			text-align: center;
+			width: rem-calc(128);
+			height: rem-calc(128);
+			margin: auto;
+			background: $ekleziaPrimary;
+			@include radius(50%);
+			color: $white;
+			line-height: rem-calc(128);
+			font-size: $h1-font-size;
+		}
+
+		h4 {
+			text-transform: uppercase;
+			margin-top: 1rem;
+		}			
+	}
+}
+
+
+
+// 3. Vote Section
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.ekExplain {
+	position: relative;
+	/* top:0;
+	left: 0; */
+	display: block;
+	height: 100% !important;
+	min-height: 100% !important;
+	width: 100%;
+	background: url(../images/how-to-bg.jpg) bottom center no-repeat;	
+	@include coverBg;
+
+	.explainWrapper {
+		//border: solid 2px blue;
+		@include centre(both);
+
+		.howToGrid {
+			@include block-grid( $per-row: 3,$spacing: $block-grid-default-spacing, $base-style: true);	
+			li > div {
+				@include single-transition(all, 400ms, ease-out);
+				background: $white;
+				padding-bottom: 1rem;
+
+				i {
+					@include single-transition(all, 400ms, ease-out);
+					display: block;
+					text-align: center;
+					font-size: 350%;
+					padding: 4rem 0;
+				}
+
+				h4 {
+					font-size: $h6-font-size;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+
+				h5 {
+					text-align: center;
+					font-size: .75rem;
+					color: darken($iron, 15);
+					text-transform: uppercase;
+					letter-spacing: 1px;
+				}
+
+				p {
+					font-size: .9rem;
+				}
+
+				.explainMoreCta {
+					display: block;
+					text-align: center;
+					color: $ekleziaPrimary;
+					padding: 1rem;
+					span {
+						@include single-transition(all, 400ms, ease-out);
+						@include radius(50%);
+						font-size: 3rem;
+						display: block;
+						margin: auto;
+						border: solid 3px $ekleziaPrimary;
+						width: 3rem;
+						height: 3rem;
+						line-height: 2.75rem;
+						font-weight: 400;
+						&:hover {
+							background: $ekleziaPrimary;
+							color: $white;
+						}							
+					}
+
+				}
+				/* SET HOVER STYLE FOR DIV BG & ICON */
+				&:hover {
+					background: $snow;
+					i {
+						color: $ekleziaPrimary;
+					}
+				}
+			}	
+		}
+	}
+
+}
+
+
+// 4. Project Discover
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.projectDiscover {
+	padding: 4rem;
+
+	h3 > i {
+		display: block;
+		font-size: 200%;
+		margin: 1rem auto;
+	}
+
+	/* DESIGN FOR TABS */
+	.tabs {
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-top: 2rem;
+		/* DESIGN FOR ACTIVE TABS */
+		.active {
+			border-bottom: solid 4px $ekleziaPrimary !important;
+			outline: none !important;
+		}
+	}
+}
+
+
+// 5. Ekelezia achievements
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.ekleziaAchievements {
+	background: url(../images/achievements.jpg) bottom center no-repeat ;
+	padding: 3rem;
+	@include coverBg;
+	position: relative;
+	@include clearfix;
+
+	h4,
+	p,
+	span {
+		color: $white;
+	}
+
+	h4 {
+		margin-bottom: 5rem;
+	}
+
+	p {
+		font-size: $h4-font-size;
+		span {
+			display: block;
+			font-size: $h1-font-size;
+			font-weight: $font-weight-bold;
+		}
+	}
+}
+
+
+// 6. User Testimony
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.userTestimony {
+	margin-top: 4rem;
+	
+	h2 {
+		margin-top: 40px;
+		font-weight: 200;
+		color: #333;
+	}
+
+	img {
+		display: block;
+		@include radius(50%);
+	}
+
+	.centered-text {
+		text-align: center;
+	}
+
+	.quote-marks {
+		font-size: $h1-font-size*2;
+		font-family: Garamond;
+		color: $silver;
+	}
+
+	.move-right {
+		position: relative;
+		text-align: right;
+	}
+
+	.quote {
+		border-radius: 5px;
+		p {
+			font-weight: 300;
+		}
+	}
+	@media only screen and (max-width: 40em) {
+		.quote p {
+			padding-left: 20px;
+		}
+	}
+
+	.student {
+		margin-left: 25px;
+		margin-bottom: 80px;
+		.photo {
+			@include radius(50%);
+			background-color: #ccc;
+			width: 70px;
+			height: 70px;
+			float: left;
+			margin-right: 15px;
+		}
+		p {
+			position: relative;
+			top: 5px;
+			&:nth-child(2) {
+				font-size: 16px;
+				font-weight: 500;
+				margin-bottom: 0;
+			}
+			&:nth-child(3) {
+				font-size: 14px;
+				font-weight: 400;
+				color: #777;
+			}
+		}
+	}
+}
+

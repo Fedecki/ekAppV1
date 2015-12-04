@@ -1,0 +1,74 @@
+// EKLEZIA USER COMMENTS
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+// f. Comments
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.commentsArea {
+	//border-bottom: solid 2px $silver;
+	@extend .columns ;
+	@include clearfix;
+	padding: 1rem .5rem !important;
+
+	
+	// Set avatar
+	.userPic {
+		@include grid-column(2);
+		img {
+			max-width: rem-calc(100);
+			max-height:  rem-calc(100);
+			@include radius(50%);
+		}
+	}
+
+	.userComment {
+		@include grid-column(10);
+		border-left: solid 6px $silver;
+
+		p {
+			margin-bottom: .5rem !important;
+		}
+		span {
+			//color: $light-grey;
+			display: block;
+			float: left;
+			font-weight: 500;
+			font-size: .8rem;
+		}
+	}
+
+	// SET MOBILE DESIGN FOR COMMENTS
+	@media #{$small-only} {
+		.userPic,
+		.userComment {
+			@include grid-column(12);
+			img {
+				display: block;
+				margin: 1rem auto;
+			}
+		}
+		.userComment {
+			padding-top: .5rem;
+			border-top: solid 4px $silver; 
+			border-left: none;
+		}
+	}
+	
+	.commentLikes {
+		ul > li {
+			line-height: 100%;
+			i {
+				float: left;
+				padding: 0 .35rem;
+			}
+		}
+	}
+}
+
+.allComments {
+	margin-top: 1rem;
+	text-align: center;	
+	@extend .columns;
+}

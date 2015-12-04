@@ -1,0 +1,17 @@
+// EKLEZIA TOPBAR SEARCH UI
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// TOPBAR SEARCH DEFAULT 
+
+.topBarSearch-wrapper {
+	@extend .columns;
+	z-index: 9999;
+	position: absolute;
+	top:  0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: $topbar-height;
+	background: $ekleziaPrimary;
+}

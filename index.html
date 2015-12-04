@@ -1,0 +1,709 @@
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Eklezia - La plateforme citoyenne qui change la vie réelle</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+</head>
+
+
+
+<body>
+
+
+
+	<!-- DESIGN FOR LOGIN | SUBSCRIPTION | PASSWORD RESET -->
+
+
+	<!-- SUBSCRIBE MODAL -->
+	<div id="userSubscribe" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<div class="columns modalBody">
+			<img src="images/ek-logo-white.png" alt="">
+			<h2 class="text-center">Créer un compte sur Eklezia</h2>
+			<!-- START SUBSCRIPTION FORM -->
+			<form action="">
+				<div class="columns">
+					<i class="icon-user"></i>
+					<input type="text" placeholder="Votre prénom">
+				</div>
+				<div class=" columns">
+					<i class="icon-user"></i>
+					<input type="text" placeholder="Votre Nom">
+				</div>  
+				<div class=" columns">
+					<i class="icon-envelope"></i>
+					<input type="email" placeholder="Votre email">
+				</div> 
+				<div class=" columns">
+					<i class="icon-lock"></i>
+					<input type="password" placeholder="Votre mot de passe">
+					<a href="" class="passwordShow">
+						<i class="icon-eye"></i>
+					</a>
+				</div>
+				<div class="columns">
+					<button class="button right success">Valider</button>
+				</div>                                                        
+			</form>
+			<!-- END SUBSCRIPTION FORM -->
+			<div class="columns">
+				<p class="text-center">Déjà inscrit ? <a href="" data-reveal-id="userLogin">connectez vous</a></p>
+			</div>
+		</div>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+	<!-- END SUBSCRIBE MODAL -->
+
+
+
+
+	<!-- LOGIN MODAL -->
+	<div id="userLogin" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<div class="columns modalBody">
+			<img src="images/ek-logo-white.png" alt="">
+			<h2 class="text-center">Connectez vous à Eklezia</h2>
+
+			<!-- START SUBSCRIPTION FORM -->
+			<form action="">
+				<div class=" columns">
+					<i class="icon-envelope"></i>
+					<input type="email" placeholder="Votre email">
+				</div> 
+				<div class=" columns">
+					<i class="icon-lock"></i>
+					<input type="password" placeholder="Votre mot de passe">
+				</div>
+				<div class="columns">
+					<a href="" data-reveal-id="passwordReset" class="passwordResetLink left">Mot de passe oublié ?</a>
+					<button class="button right success">Valider</button>
+				</div>                                                
+			</form>
+			<!-- END SUBSCRIPTION FORM -->
+			<div class="columns">
+				<p class="text-center">pas encore de compte ? <a href="" data-reveal-id="userSubscribe">Créer un compte sur Eklezia</a></p>
+			</div>
+		</div>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+	<!-- END OF LOGIN MODAL -->
+
+
+	<!-- LOGIN MODAL -->
+	<div id="passwordReset" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<div class="columns modalBody">
+			<img src="images/ek-logo-white.png" alt="">
+			<h2 class="text-center">Réinitialisez votre mot de passe</h2>
+
+			<!-- START RESET FORM -->
+			<form action="">
+				<div class=" columns">
+					<i class="icon-envelope"></i>
+					<input type="email" placeholder="Votre email">
+				</div> 
+				<div class="columns">
+					<button class="button right success">Valider</button>
+				</div>                                                
+			</form>
+			<!-- END RESET FORM -->
+
+		</div>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+	<!-- END OF LOGIN MODAL -->
+
+
+
+
+	<!-- OFF CANVAS MENU STARTS HERE DO NOT REMOVE -->
+
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar show-for-small">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+
+				<section class="middle tab-bar-section">
+					<h1 class="title">Eklesia.org</h1>
+				</section>
+			</nav>
+
+
+			<!-- MENU FOR NO LOGGED USERS -->
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">  
+					<img class="ekLogo" src="images/ek-logo.png" alt="eklezia logo">	
+					<li><a href="#" data-reveal-id="menuLSubscribe">Accueil</a></li>
+					<li><a href="#">Rechercher</a></li>
+					<li><a href="#">Découvrir</a></li>
+					<li><a href="#">Le blog</a></li>
+				</ul>
+				<!-- /MENU FOR NO LOGGED USERS -->
+
+			</aside>
+			<!-- END OFF CANVAS WRAPPER -->
+
+
+
+
+
+			<!-- ALL PAGES CONTENT SHOULD BE WRITTEN AFTER INTO THIS SECTION	 -->
+			<section class="main-section">
+
+				<!-- FIRST SCREEN DESIGN  -->
+				<div class="row">
+
+					<!-- MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+					<div class="contain-to-grid sticky ">
+						<nav id="homeNav" class="top-bar" data-topbar role="navigation">
+							<ul class="title-area">
+								<li class="name">
+									<h1><a href="#">Eklezia</a></h1>
+								</li>
+								<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+							</ul>
+							<section class="top-bar-section">
+								<!-- Left Nav Section -->
+								<ul class="left topBarSearch">
+									<a href=""><i class="fa fa-search"></i></a>                
+								</ul>
+								<!-- Right Nav Section -->
+								<ul class="right">
+
+									<!-- add class "noNewNotif" to hide notification count -->
+									<li class="topBarNotifications">
+										<a href=""> <i class="icon-bubble"></i> </a>
+										<span class="notifAlert">
+											1
+										</span>
+										<!-- Notifications List Design -->
+										<ul class="notifList">
+											<header>
+												<h5>Notifications</h5>
+												<a href="" class="notifAllRead">Marquer comme lu</a>
+											</header>
+											<!-- unread Notifications class -->
+											<li class="unreadNotification" data-equalizer >									
+												<div class="notifIcon" data-equalizer-watch >
+													<i class="icon-star"></i>
+												</div>
+												<div class="notifContent " data-equalizer-watch >
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ducimus id voluptates neque <a href=""> illum non</a> necessitatibus, perspiciatis.</p>
+												</div>												
+											</li>
+											<li data-equalizer >									
+												<div class="notifIcon columns" data-equalizer-watch >
+													<i class="fa fa-users"></i>
+												</div>
+												<div class="notifContent columns" data-equalizer-watch >
+													<p> Magni ducimus id voluptates neque <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
+												</div>												
+											</li>
+											<li data-equalizer >											
+												<div class="notifIcon columns" data-equalizer-watch >
+													<i class="fa fa-thumbs-up"></i>
+												</div>
+												<div class="notifContent columns" data-equalizer-watch >
+													<p> <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
+												</div>												
+											</li>	
+											<li data-equalizer >											
+												<div class="notifIcon columns" data-equalizer-watch >
+													<img src="images/userPic.png" alt="">
+												</div>
+												<div class="notifContent columns" data-equalizer-watch >
+													<p> <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
+												</div>												
+											</li>						
+										</ul>										
+									</li>
+									<li class="topBarUserMenu has-dropdown">
+										<a href=""> <img src="images/userPic.png" alt="">
+											<span>User Name</span>
+										</a>
+										<ul class="dropdown">
+											<li><a href="">Profil</a></li>
+											<li><a href="">Projets favoris</a></li>
+											<li><a href="">Paramètres</a></li>
+											<li><a href="">Inviter des amis</a></li>
+											<li><a href="">Déconnexion</a></li>
+										</ul>
+									</li>
+									<li class="has-form">
+										<a href="project-add" class="button">Déposer un projet</a>
+									</li>
+									<li class="login" data-reveal-id="userLogin"><a href="#">Login</a></li>
+									<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Subscribe</a></li>
+								</ul>
+							</section>
+						</nav>
+					</div>
+					<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+
+
+
+
+
+
+					<!-- HOME CLAIM DESKTOP - TABLET -->
+					<section class="homeClaim">
+						<span class="homeOverlay">
+							<div class="columns homeDiscover">
+								<h2 class="text-center">La plateforme citoyenne qui change la vie réelle </h2>
+								<a href="" class="ekDiscoverVideo"> 
+									<span><i class="icon-star"></i> Découvrir</span>
+								</a>
+							</div> <!-- /Home Discover -->
+
+
+							<!-- STARTING PROJECT SEARCH FORM -->
+							<div class="homeSearchForm " id="formy">
+								<a href=""></a>
+								<!-- <span class="closeSearch">
+									<i class="fa fa-times-circle"></i>
+								</span>	 -->
+								<form action="">
+									<ul class="small-block-grid-1 medium-block-grid-4">
+										<li>
+											<span class="formSearchTile right" for="">Chercher un projet</span>
+										</li>
+										<li>
+											<label for="">
+												<input type="text" placeholder="Localisation">
+												<!-- <span>Localisation</span> -->
+											</label>
+											
+										</li>
+										<li>
+											<select name="projectCategory">
+												<option value="value1" selected>Toutes les catégories</option> 
+												<option value="value1">politique sociale / Santé</option> 
+												<option value="value2" >Justice / Sécurité</option>
+												<option value="value3">Économie / Finance / Consommation</option>
+												<option value="value4">Éntreprise / Tourisme / Emploi</option>
+												<option value="value5">Éducation/ Jeunesse</option>
+												<option value="value6">Culture/ Sport / Vie associative</option>
+												<option value="value7">Transport / Voiries / Logement</option>
+												<option value="value8">Développement durable / Énergie</option>
+											</select>
+										</li>
+										<li>
+											<span href="#" class="button small left">Rechercher</span>
+										</li>
+									</ul>
+								</form>							
+							</div>						  
+						</span>
+					</section>  
+				</div>
+				<!-- END OF FIRST SCREEN DESIGN  -->
+
+
+				<!-- ABOUT EKLEZIA SECTION -->
+				<section class="homeAbout"> 
+					<div class="row">
+						<div class="columns medium-10 medium-centered ">
+							<img style="display:block; margin:auto" src="http://www.placehold.it/100x100" alt="">
+							<h3 class="text-center">Le projet Eklezia</h3>
+							<p class="text-center columns">
+								Consectetur adipisicing elit. <strong>Accusamus optio vero</strong> deserunt ratione incidunt, laudantium distinctio aliquid sint. Et officiis, sequi cum nobis excepturi neque blanditiis consectetur quis sunt molestiae. Consectetur adipisicing elit. Aliquid quae illo, fugit blanditiis in temporibus vero repellendus.
+							</p>	
+							<img src="images/pingouins.jpg" alt="">					
+						</div>
+
+
+
+					</div>
+				</section>
+				<!-- END OF ABOUT EKLEZIA SECTION -->
+
+				<section class="ekExplain">
+					<div class="row">
+						<div class="columns medium-10 medium-centered explainWrapper">
+							<ul class="howToGrid" data-equalizer>
+								<li>
+									<div class="columns" data-equalizer-watch>										
+										<i class="icon-heart"></i>
+										<h4 class="text-center">Nos valeurs</h4>
+										<h5>Nos convictions</h5>
+										<p class="text-center">
+											Molestias nemo magnam dolorem sed laboriosam, Eaque aliquam dignissimos voluptas culpa, non, illo ut enim placeat.
+										</p>
+										<a href="" class="explainMoreCta">
+											<span>+</span>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="columns" data-equalizer-watch>
+										<i class="icon-directions"></i>
+										<h4 class="text-center">Comment ça marche ?</h4>
+										<h5>c'est easy baby !</h5>
+										<p class="text-center">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptas maiores totam autem reiciendis optio ducimus repudiandae.
+										</p>
+										<a href="" class="explainMoreCta">
+											<span>+</span>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="columns" data-equalizer-watch>
+										<i class="icon-people"></i>
+										<h4 class="text-center">Qui sommes nous ?</h4>
+										<h5>Mystère mystère</h5>
+										<p class="text-center">
+											Consectetur adipisicing elit. Exercitationem ? Adipisci quod deleniti dignissimos fuga delectus. Tempore quo, odio blanditiis porro.. 
+										</p>
+										<a href="" class="explainMoreCta">
+											<span>+</span>
+										</a>
+									</div>
+								</li>
+							</ul>		
+						</div>
+					</div>
+				</section>
+
+
+
+
+				<!-- PROJECT DISCOVER SECTION -->
+				<section class="projectDiscover">
+					<div class="row">
+
+						<h3 class="text-center">
+							<i class="icon-rocket"></i>
+							Découvrez les projets citoyens sur Eklezia
+						</h3>
+
+
+						<ul class="tabs" data-tab>
+							<li class="tab-title active"><a href="#panel1">Projet populaires</a></li>
+							<li class="tab-title"><a href="#panel2">Nouveaux projets</a></li>
+							<li class="tab-title"><a href="#panel3">Bientôt à échéance</a></li>
+						</ul>
+
+						<div class="tabs-content">
+							<div class="content active" id="panel1">
+
+								<ul class="small-block-grid-1 medium-block-grid-3" data-equalizer="list" >
+									
+									<li >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="addFav"><i class="icon-heart"></i></span>
+												<img src="images/pingouins2.jpg" alt="project image"/>
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-globe-alt"></i>
+													</span>																				
+													<h2>Sauvons les pingouins ! et la banquise</h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>	
+
+									<li >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="addFav"><i class="icon-heart"></i></span>
+												<img src="images/pingouins.jpg" alt="project image"/>
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-energy"></i>
+													</span>																				
+													<h2>Éteignez la lumière !</h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>	
+
+									<li  >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="overlay">
+													<span class="addFav"><i class="icon-heart"></i></span>
+													<img src="images/project3.jpg" alt="project image"/>
+												</span>
+												
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-bulb"></i>
+													</span>																				
+													<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae veritatis ! </h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>	
+
+
+								</ul>
+							</div>
+
+							<div class="content" id="panel2">
+							</div>
+
+							<div class="content" id="panel3">								
+							</div>
+						</div>					
+					</div>
+
+				</section>
+				<!-- END OF PROJECT DISCOVER SECTION -->
+
+
+				<!-- EKLEZIA ACHIEVEMENTS -->
+				<section class="ekleziaAchievements">   
+
+					<div class="row">
+						<img style="display:block; margin:auto" src="http://www.placehold.it/100x100" alt="">
+						<h4 class="text-center">Eklezia en chiffres</h4>
+						<ul class="small-block-grid-1 medium-block-grid-3 ">
+							<li class="text-center">
+								<p> 
+									<span>6729</span>
+									Citoyens engagés
+								</p>
+							</li>
+							<li class="text-center">
+								<p> 
+									<span>873</span>
+									Projets citoyens
+								</p>
+							</li>
+							<li class="text-center">
+								<p> 
+									<span>258</span>
+									bla bla bla
+								</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- END OF EKLEZIA ACHIEVEMENTS -->
+
+
+
+				<!-- USER TESTIMONY SECTION -->
+				<section class="userTestimony">
+					<div class="row">
+						<h3 class="text-center">Les citoyens témoignent</h3>
+						<div class="medium-8 medium-centered columns">
+							<ul class="example-orbit" data-orbit>
+								<li class="active">
+									<div class="testimonial-wrap">
+										<div class="row">
+											<div class="small-1 large-1 columns testimonial">
+												<div class="quote-marks">&#8220;</div>
+											</div>
+											<div class="small-11 large-11 columns testimonial">
+												<div class="quote">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+												</div>
+												<div class="student">
+													<div class="photo"> 
+														<img src="http://www.placehold.it/100x100" alt="">
+													</div>
+													<p>John Doe</p>
+													<p>Important person, some Company</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="testimonial-wrap">
+										<div class="row">
+											<div class="small-1 large-1 columns testimonial">
+												<div class="quote-marks">&#8220;</div>
+											</div>
+											<div class="small-11 large-11 columns testimonial">
+												<div class="quote">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+												</div>
+												<div class="student">
+													<div class="photo"> 
+														<img src="http://www.placehold.it/100x100" alt="">
+													</div>
+													<p>John Doe</p>
+													<p>Important person, some Company</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="testimonial-wrap">
+										<div class="row">
+											<div class="small-1 large-1 columns testimonial">
+												<div class="quote-marks">&#8220;</div>
+											</div>
+											<div class="small-11 large-11 columns testimonial">
+												<div class="quote">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum.</p>
+												</div>
+												<div class="student">
+													<div class="photo"> 
+														<img src="http://www.placehold.it/100x100" alt="">
+													</div>
+													<p>John Doe</p>
+													<p>Important person, some Company</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</li>
+							</ul>                        
+						</div>
+
+					</div>
+				</section>
+				<!-- END OF USER TESTIMONY SECTION -->
+
+				<section class="pressTakl">
+					<div class="row">
+						<div class="columns">
+							<h3 class="text-center">
+								Ils parlent de nous
+							</h3>
+							<ul class="inline-list">
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+								<li><img src="http://www.placehold.it/100x75" alt=""></li>
+							</ul>
+						</div>		
+					</div>
+
+				</section>
+
+				<footer>
+					<div class="row">
+						<div class="small-12 medium-4 columns">
+							<img class="ek-logo" src="http://www.placehold.it/100x75" alt="">
+							<p>
+								Similique assumenda quo sed, accusamus exercitationem earum nulla consequatur laborum cum ratione doloremque quasi quam libero recusandae maiores iusto consequuntur ea numquam.
+							</p>
+							<ul class="small-block-grid-3">
+								<li>  <a href=""> <i class="icon-social-facebook"></i> </a> </li>
+								<li>  <a href=""> <i class="icon-social-twitter"></i>	 </a> </li>
+								<li>  <a href=""> <i class="fa fa-google"></i>	 </a> </li>
+							</ul>
+						</div>
+						<div class="small-12 medium-4 columns">
+							<h5>Main sub section title</h5>
+							<ul>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+							</ul>
+						</div>
+						<div class="small-12 medium-4 columns">
+							<h5>Main sub section title</h5>
+							<ul>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+								<li><a href="">this is a link !</a></li>
+							</ul>                       
+						</div>					
+
+					</div>
+				</footer>
+
+
+			</section>          
+			<!-- END OF OFF CANVAS WRAPPER -->
+
+			<!-- ALLOW OFF CANVAS CLOSE -->
+			<a class="exit-off-canvas"> </a>
+		</div>
+		<!-- END OFF INNER WRAP -->
+	</div> 
+	<!-- END OFF CANVAS WRAP -->
+	<!-- NO CONTENT SHOULD BE INCUDED AFTER -->
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/foundation/js/foundation.min.js"></script>
+	<script src="js/app.js"></script>
+
+
+
+
+
+
+	<script>
+		$('.smallMenuDisplay').click(function() {
+			$( "#formy" ).addClass( "homeSearchForm columns homeSearchFormExpanded");
+			$( this ).parent().addClass("homeClaimHide");
+		});
+
+		$('.closeSearch').click(function() {
+			$( "#formy" ).removeClass( "homeSearchFormExpanded smallMenuDisplay");
+		});
+
+
+		$('.projectInfosBtn').click(function() {
+			$( this ).parent().removeClass( "caption").addClass("captionExpanded");
+			$( this ).addClass("closeCaption");				
+		});
+
+		$('.closeCaption').click(function() {
+			$( this ).parent().removeClass( "captionExpanded").addClass("caption");			
+		});
+
+	</script>
+
+
+
+
+
+</body>
+</html>

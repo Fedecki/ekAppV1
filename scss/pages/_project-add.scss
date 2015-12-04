@@ -1,0 +1,283 @@
+// Project ADD
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+.projectAddWrapper {
+	margin-top: $topbar-height*2;
+
+	.ekLogo {
+		display: block;
+		padding: 1rem;
+		max-width: rem-calc(80);
+		max-height: auto;
+		margin: auto;
+	}
+
+	form {
+
+		margin: 3rem auto;
+
+		.columns {
+			margin-bottom: 2rem;
+		}
+
+		label {
+			position: relative;
+			display: block;
+
+			input[type="text"],
+			input[type="date"] {
+				@include single-transition(all, 300ms, ease-out);
+				box-sizing: border-box;
+				display: block;
+				border:none;
+				border-bottom: solid 1px $silver;
+				width: 100%;
+				padding: 20px;
+				height: 70px;
+				margin-bottom: 20px;
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: $charcoal;
+				outline: none;
+				text-align: center;
+				
+				&::placeholder {
+					@include single-transition(all, 300ms, ease-out);
+					color: $aluminum !important;
+				}
+
+				&:focus, &.populated {
+					padding-top: 12px;
+					padding-bottom: 12px;
+					border-bottom: solid 4px $ekleziaPrimary !important;
+					background: $snow;
+					&::placeholder {
+						color: transparent;
+					}
+
+					& + span {
+						opacity: 1;
+						top: -1.75rem;
+						font-size: 1rem;
+					}
+				}
+			}
+
+			span {
+				color: $ekleziaPrimary;
+				position: absolute;
+				width: 100%;
+				text-align:center;
+				opacity: 0;
+				font-weight: bold;
+				@include single-transition(all, 300ms, ease-out);
+			}		
+		}
+
+		input[type="submit"] {
+			@include single-transition(all, 300ms, ease-out);
+			border: none;
+			background: $ekleziaPrimary;
+			color: #fff;
+			padding: 16px 40px;
+			font-size: 1rem;
+			&:hover {
+				background: #109f67;
+			}
+		}
+
+		textarea {
+			min-height: 400px;
+			border: solid 1px $silver;
+		}
+	}
+}
+
+
+
+
+#file-upload {
+	margin: 0 auto;
+	padding: 10px;
+}
+.upload {
+	padding: 5px 10px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	&:hover {
+		opacity: 0.75;
+	}
+	&:active {
+		opacity: 1;
+	}
+
+	a {
+		color: $charcoal;
+		cursor: pointer;
+		font-size: 1.5rem;
+		font-weight: 400;
+		height: 40px;
+		width: 40px;
+		outline-offset: -5px;
+
+		span {
+			@include clearfix;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+			position: relative;
+
+			i {
+				@include radius(50%);
+				display: block;
+				margin: auto;
+				padding: .5rem;
+				font-size: 2rem;	
+				border: solid 3px $ekleziaPrimary;
+				width: 64px;
+				height: 64px;
+				line-height: 125%;
+			}
+		}
+
+	}
+}
+
+
+
+.upload > a > .files {
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.upload > a > .files > #files {
+	bottom: 0;
+	cursor: inherit;
+	font-size: 1000px !important;
+	height: 300px;
+	margin: 0;
+	opacity: 0;
+	outline: none;
+	padding: 0;
+	position: absolute;
+	right: 0;
+}
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	/* Required to make elements draggable in old WebKit */
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+}
+
+.box {
+	margin: 20px auto 0px;
+	overflow: hidden;
+	position: relative;
+	padding: 20px 10px;
+	height: auto;
+	text-align: center;
+}
+.info-box {height: 20px;}
+.info-box {
+	bottom: 0;
+	color: #555;
+	font-size: 16px;
+	font-weight: 400;
+	height: 100%;
+	letter-spacing: 1px;
+	left: 0;
+	line-height: 80px;
+	position: absolute;
+	right: 0;
+	text-shadow: 0 1px 0px #FFF;
+	top: 0;
+	width: 100%;
+}
+#container {padding: 20px 0px;}
+#container > .box-image {
+	display: inline-block; 
+	width: 50%; 
+	height: auto;
+	margin: 5px;
+	text-align: center;
+	cursor: move;
+	position: relative;
+	overflow: hidden;
+	vertical-align: middle;
+}
+#container > .box-image > span {
+	display: block;
+	width:100%;
+	font-size: .8rem;
+	font-weight: 500;
+	color:$white;
+	cursor: default;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: .5rem;
+	background: rgba($jet, .5);
+	position: absolute;
+	left:0;
+	bottom: 0px;
+}
+#container > .box-image > img {
+	display: block;
+	height:100%;
+	width: 100%;	
+	object-fit: cover;
+	padding:0px;
+	margin:auto;
+
+}
+.box-bar {
+	*background: transparent;
+	border-top: 0;
+	border-radius: 3px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	max-width: 400px;
+	margin: 0 auto 20px;
+	overflow: hidden;
+	padding: 10px 10px;
+	position: relative;
+	text-align: center;
+}
+.box-bar > .fa {color: #08C;font-size: 20px;}
+.counter, #count {display: inline-block;vertical-align: middle;}
+#count {cursor: pointer;margin: 0px 20px 0 0;padding: 7px 15px 9px;}
+#count {
+	background: #08C;
+	border-radius: 5px;
+	color: #FFF;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+.counter {
+	background: #FFF;
+	border-radius: 50px;
+	color: #08C;
+	font-family: Roboto;
+	font-size: 25px;
+	height: auto;
+	margin: 0 10px 0 20px;
+	padding: 5px 15px;
+	vertical-align: middle;
+}
+
+
+
+
+
+

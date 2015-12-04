@@ -1,0 +1,274 @@
+// EKLEZIA TOPBAR
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// 1. TopBar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+/* DEFINES TOP BAR DESIGN FOR TOP 0  POSITION (No scroll) */
+.top-bar {
+	z-index: 1001 !important;
+	position: absolute !important;
+	top:0;
+	left: 0;
+	width: 100% !important;
+	@include clearfix;
+	padding: 0 1rem;
+	background: rgba($white, 0) !important;
+	li  {
+		background: none !important;
+		a {
+			font-weight: $font-weight-bold !important;
+		}
+	}
+}
+
+.has-dropdown > .dropdown > li > a  {
+	padding: .5rem .75rem !important;
+	line-height: 3rem !important;
+	font-weight: 500 !important;
+}
+
+/* HIDE SEARCH ICON WHEN TOPBAR POSITION IS TOP:0 */
+.topBarSearch {
+	position: relative;
+	@include clearfix;
+	width: 100%;
+	margin-top: $topbar-height/3.5;
+	
+	i {
+		display: none;
+		color: $ekleziaPrimary;
+		margin: $topbar-height/3.25 0 0 1rem;
+		font-size: 1.5rem;
+		@include single-transition(all,500ms,ease-out);
+	}
+}
+
+.topBarNotifications {
+	position: relative;
+
+	a {
+		font-size: 1.2rem !important;
+		height: $topbar-height;
+		padding: 0 .5rem !important;
+
+		i {
+			display: block;
+			text-align: center;
+			border: solid 2px white;
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-top: $topbar-height/4.5;
+			line-height: 200%;
+			@include radius(50%);
+		}
+	}
+
+
+
+	/* SET POSITION FOR NOTIFICATION COUNT ALERT */
+	.notifAlert {
+		background: red;
+		position: absolute;
+		top: $topbar-height/6;
+		right: 0;
+		color: $white;
+		font-size: .75rem;
+		line-height: 1.25rem;
+		width: rem-calc(24);
+		height: rem-calc(24);
+		text-align: center;
+		@include radius(50%);
+	}
+
+	/* SET NOTIFICATIONS DESIGN */
+	.notifList {
+		border: solid 1px $silver !important;
+		display: none;
+		position: absolute;
+		top: $topbar-height;
+		background: $white;
+		width: rem-calc(360);
+		right: rem-calc(-150) !important;
+		@include clearfix;
+		z-index: 9999;
+		
+		header {
+			display: block;
+			@include clearfix;
+			width: 100%;
+			border-bottom: solid 1px $silver;
+			padding: .75rem;
+
+			h5 {
+				float: left;
+			}
+
+			.notifAllRead {
+				@extend .right;
+				font-size: .75rem !important;
+				line-height: 150% !important;
+				position: absolute;
+				right: 1rem;
+				top: 1.25rem;
+			}
+		}
+
+		li {
+			position: relative;
+			padding: .5rem 0;
+			border-bottom: solid 1px $silver;
+			/* REMOVE BORDER BOTTOM FOR LAST CHILD */
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				background: #F8F8F3 !important;
+				cursor: pointer;
+				.notifIcon > i {
+					color: $ekleziaPrimary !important
+				}
+			}
+		}
+		
+		/* Set a different bg color for unread notifications */
+		.unreadNotification {
+			background: $silver !important;
+		}
+		
+
+		.notifIcon {
+			@include  grid-column(3);
+			position: relative;
+			height: 100%;
+			text-align: center !important;
+
+			i {
+				font-size: 200%;
+			}
+			/* DEFINES USER AVATAR SIZE FOR NOTIFICATION */
+			img {
+				max-width: rem-calc(64);
+				max-height: rem-calc(64);
+			}
+		}
+		.notifContent {
+			@include  grid-column(9);
+			p {
+				color: $charcoal !important;
+				font-size: .85rem !important;
+				line-height: 140% !important;
+				margin-bottom: 0rem;
+			}
+			a {
+				@extend p;
+				color: $ekleziaPrimary !important;
+				display: inline !important;
+				@include columnsReset;
+			}			
+		}
+	}
+	&:hover {
+		.notifList {
+			display: block;
+			border: solid 1px $silver !important;
+		}
+	}
+}
+
+/* HIDE NOTIFICATION COUNT WHEN THERE IS NO NEW NOTIFICATIONS TO DISPLAY */
+.noNewNotifs  {
+	.notifAlert {
+		display: none !important;
+	}
+}	
+
+.topBarUserMenu {			
+	img {
+		width: rem-calc(48px);
+		height: rem-calc(48px);
+		;
+	}
+	a {
+		span {
+			padding: 0 1rem;
+			font-weight: 500;
+			position: relative;
+			&:after {
+				font-family: "fontAwesome";
+				content:"\f107";
+				display: block;
+				position: absolute;
+				top:rem-calc(-25);
+				right: 0;
+			}
+		}
+	}
+
+	.dropdown {
+		border: solid 1px $silver;
+		li {
+			border-bottom: solid 1px $silver;
+		}
+	} 
+
+}
+
+
+/* DEFINES TOP BAR DESIGN AFTER SCROLL */
+.fixed {	
+	@include single-transition(all, 500ms, ease-out);
+	@include clearfix;
+	background: rgba($white, 1);
+	width: 100%;
+	height: rem-calc(70);
+	-moz-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
+	-webkit-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
+	-o-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
+	box-shadow: 0px 2px 1px 1px rgba($jet, .25);
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba($jet, .25), Direction=180, Strength=1);
+	.topBarSearch {		
+		i {
+			color: $ekleziaPrimary !important;
+			display: block !important;
+		}		
+	}
+
+	li  {
+		background: none !important;
+		a {
+			color:$ekleziaPrimary !important;
+		}
+	}
+
+	.subscribe > a {
+		border: solid 2px $ekleziaPrimary !important;
+		&:hover {
+			background: $ekleziaPrimary !important;
+			color: $white !important;
+		}
+	}
+
+	.topBarNotifications > a > i {
+		border: solid 2px $ekleziaPrimary;
+	}
+
+}
+
+.subscribe > a {
+	@include radius(6px);
+	@include single-transition;	
+	border: solid 2px $white;
+	line-height: $topbar-height/2 !important;
+	margin-top: $topbar-height/4.5;
+	&:hover {
+		background: $white !important;
+		color: $jet !important;
+	}
+}
+
+.defaultTopBar {
+	@extend .fixed;
+}

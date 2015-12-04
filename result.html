@@ -1,0 +1,340 @@
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Eklezia</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+	<!-- OFF CANVAS MENU STARTS HERE DO NOT REMOVE -->
+
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar show-for-small">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+
+				<section class="middle tab-bar-section">
+					<h1 class="title">Eklesia.org</h1>
+				</section>
+			</nav>
+
+
+			<!-- MENU FOR NO LOGGED USERS -->
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">  
+					<img class="ekLogo" src="images/ek-logo.png" alt="eklezia logo">	
+					<li><a href="#" data-reveal-id="menuLSubscribe">Accueil</a></li>
+					<li><a href="#">Rechercher</a></li>
+					<li><a href="#">Découvrir</a></li>
+					<li><a href="#">Le blog</a></li>
+				</ul>
+				<!-- /MENU FOR NO LOGGED USERS -->
+
+			</aside>
+
+			<!-- END OFF CANVAS WRAPPER -->
+
+
+			<!-- ALL PAGES CONTENT SHOULD BE WRITTEN AFTER INTO THIS SECTION	 -->
+			<section class="main-section">
+
+				<!-- FIRST SCREEN DESIGN  -->
+				<div class="row">
+
+					<!-- MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+					<div class="contain-to-grid sticky hide-for-small">
+						<nav id="homeNav" class="top-bar" data-topbar role="navigation">
+							<ul class="title-area">
+								<li class="name">
+									<h1><a href="#">Eklezia</a></h1>
+								</li>
+								<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+							</ul>
+							<section class="top-bar-section">
+								<!-- Left Nav Section -->
+								<ul class="left topBarSearch">
+									<a href=""><i class="fa fa-search"></i></a>                
+								</ul>
+								<!-- Right Nav Section -->
+								<ul class="right">
+
+									<li class="login" data-reveal-id="userLogin"><a href="#">Login</a></li>
+									<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Subscribe</a></li>
+								</ul>
+							</section>
+						</nav>
+					</div>
+					<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+
+
+
+
+
+
+					<div class="row">
+						<div class="columns">
+
+							<h1 class="text-center">Résulat de votre recherche</h1>
+
+							<aside >
+								<h4 class="resultFilterBtn">Filter les résultats</h4>
+								<form action="">
+									<div class="panel">
+										<h5>Localisation</h5>
+										<input type="text">
+										<ul class="cityLlist">
+											<li>City 1	
+												<span data-tooltip aria-haspopup="true" class="has-tip" title="Supprimer cette vile">
+													<i class="fa fa-times-circle"></i>
+												</span>
+											</li>
+											<li>City 1	
+												<span data-tooltip aria-haspopup="true" class="has-tip" title="Supprimer cette vile">
+													<i class="fa fa-times-circle"></i>
+												</span>
+											</li>
+											<li>City 1	
+												<span data-tooltip aria-haspopup="true" class="has-tip" title="Supprimer cette vile">
+													<i class="fa fa-times-circle"></i>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="panel">
+										<h5>Catégories</h5>
+										<ul class="resultFilterList">
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch1" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch1"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch2" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch2"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch3" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch3"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch4" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch4"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch5" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch5"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch6" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch6"></label>
+												</div>
+											</li>
+											<li>
+												<span class="left">Category Name</span>
+												<div class="switch radius right">
+													<input id="examplecheckboxSwitch7" type="checkbox" name="testGroup">
+													<label for="examplecheckboxSwitch7"></label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<a href="#" class="button">Réinitialiser les filtres</a>
+								</form>
+
+							</aside>
+							<div class="resultWrapper">
+
+
+
+								<ul class="small-block-grid-1 medium-block-grid-3">
+									
+									<li >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="addFav"><i class="icon-heart"></i></span>
+												<img src="images/pingouins2.jpg" alt="project image"/>
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-globe-alt"></i>
+													</span>																				
+													<h2>Sauvons les pingouins ! et la banquise</h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+
+									<li >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="addFav"><i class="icon-heart"></i></span>
+												<img src="images/pingouins2.jpg" alt="project image"/>
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-globe-alt"></i>
+													</span>																				
+													<h2>Sauvons les pingouins ! et la banquise</h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>
+
+									<li >
+										<a href="project.html">									
+											<figure class="projectPreview2" data-equalizer-watch="list">
+												<span class="addFav"><i class="icon-heart"></i></span>
+												<img src="images/pingouins2.jpg" alt="project image"/>
+												<figcaption>
+													<span class="categoryIcon">
+														<i class="icon-globe-alt"></i>
+													</span>																				
+													<h2>Sauvons les pingouins ! et la banquise</h2>
+													<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+													<ul class="projectDataList">
+														<li>
+															<i class="icon-calendar"></i>
+															<span class="projectData">12 jours</span>													
+														</li>
+														<li>
+															<i class="icon-like"></i>
+															<span class="projectData">6739 votes</span>			
+														</li>
+													</ul>
+												</figcaption>
+											</figure>
+										</a>
+									</li>																		
+
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<footer>
+						<div class="row">
+
+							<div class="small-12 medium-4 columns">
+								<img src="http://www.placehold.it/100x75" alt="">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique assumenda quo sed, accusamus exercitationem earum nulla consequatur laborum cum ratione doloremque quasi quam libero recusandae maiores iusto consequuntur ea numquam.
+								</p>
+								<ul class="small-block-grid-3">
+									<li><i class="fa fa-facebook"></i></li>
+									<li><i class="fa fa-twitter"></i></li>
+									<li><i class="fa fa-google"></i></li>
+								</ul>
+							</div>
+							<div class="small-12 medium-4 columns">
+								<h5>Main sub section title</h5>
+								<ul>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+								</ul>
+							</div>
+							<div class="small-12 medium-4 columns">
+								<h5>Main sub section title</h5>
+								<ul>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+									<li><a href="">this is a link !</a></li>
+								</ul>                       
+							</div>          
+
+						</div>
+					</footer>
+
+
+				</section>          
+				<!-- END OF OFF CANVAS WRAPPER -->
+
+
+				<a class="exit-off-canvas"></a>
+
+			</div>
+		</div>
+
+
+
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script src="js/app.js"></script>
+
+
+		<script>
+			$('.projectInfosBtn').click(function() {
+				$( this ).parent().removeClass( "caption").addClass("captionExpanded");
+				$( this ).addClass("closeCaption");				
+			});
+
+			$('.closeCaption').click(function() {
+				$( this ).parent().removeClass( "captionExpanded").addClass("caption");			
+			});
+
+	/*$('.resultFilterBtn').click(function() {
+		$( this ).parent().addClass("mobileFilterShow ");			
+	});*/
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Eklezia</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar show-for-small">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+
+		  <!-- <section class="middle tab-bar-section">
+			 <h1 class="title">Eklesia.org</h1>
+			</section> -->
+		</nav>
+
+		<aside class="left-off-canvas-menu">
+			<ul class="off-canvas-list">  
+				<img src="images/ek-logo.png" alt="eklezia logo">
+
+
+				<li><a href="#" data-reveal-id="menuLSubscribe"><i class="fa fa-home"></i>Accueil</a></li>
+				<li><a href="#"><i class="fa fa-search"></i>Rechercher</a></li>
+				<li><a href="#"><i class="fa fa-search"></i>Découvrir</a></li>
+				<li><a href="#"><i class="fa fa-comments"></i>Le blog</a></li>
+			</ul>
+		</aside>
+
+		<!-- OFF CANVAS WRAPPER -->
+
+
+		<!-- /////////////////////////////////////////////////////////// -->
+		<!-- ////////////////// CODE STARTS HERE /////////////////////// -->
+		<!-- /////////////////////////////////////////////////////////// -->
+
+		
+		<!-- MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+		<div class="contain-to-grid sticky hide-for-small">
+			<nav id="homeNav" class="top-bar defaultTopBar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="#">Eklezia</a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+				<section class="top-bar-section">
+					<!-- Left Nav Section -->
+					<ul class="left topBarSearch">
+						<a href=""><i class="fa fa-search"></i></a>                
+					</ul>
+					<!-- Right Nav Section -->
+					<ul class="right">
+
+						<!-- add class "noNewNotif" to hide notification count -->
+						<li class="topBarNotifications">
+							<a href=""> <i class="icon-bubble"></i> </a>
+							<span class="notifAlert">
+								1
+							</span>
+							<!-- Notifications List Design -->
+							<ul class="notifList">
+								<header>
+									<h5>Notifications</h5>
+									<a href="" class="notifAllRead">Marquer comme lu</a>
+								</header>
+								<!-- unread Notifications class -->
+								<li class="unreadNotification" data-equalizer >									
+									<div class="notifIcon" data-equalizer-watch >
+										<i class="icon-star"></i>
+									</div>
+									<div class="notifContent " data-equalizer-watch >
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ducimus id voluptates neque <a href=""> illum non</a> necessitatibus, perspiciatis.</p>
+									</div>												
+								</li>
+
+							</ul>										
+						</li>
+						<li class="topBarUserMenu has-dropdown">
+							<a href=""> <img src="images/userPic.png" alt="">
+								<span>User Name</span>
+							</a>
+							<ul class="dropdown">
+								<li><a href="">Profil</a></li>
+								<li><a href="">Projets favoris</a></li>
+								<li><a href="">Paramètres</a></li>
+								<li><a href="">Inviter des amis</a></li>
+								<li><a href="">Déconnexion</a></li>
+							</ul>
+						</li>
+						<li class="has-form">
+							<a href="project-add" class="button">Déposer un projet</a>
+						</li>
+						<li class="login" data-reveal-id="userLogin"><a href="#">Login</a></li>
+						<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Subscribe</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+		<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABLET -->
+
+
+		<section class="projectAddWrapper">
+			<div class="row">
+				
+				<div class="small-10 small-centered columns">
+					<img class="ekLogo" src="images/ek-logo.png" alt="">
+					<h1 class="text-center">Créer un projet sur Eklezia</h1>
+					<p class="text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo facilis nostrum delectus ea! Earum quod cumque at non maiores fugit fuga, ad eveniet recusandae eos nulla voluptate, laboriosam ipsam laborum.
+					</p>
+					<form>
+						<div class="columns">
+							<label>
+								<input id="fname" type="text" placeholder="Le titre de votre projet">
+								<span>Le titre de votre projet</span>
+							</label>
+						</div>
+
+						<div class="medium-6 columns">
+							<label>
+								<input type="text" placeholder="Localisation">
+								<span>Localisation</span>
+							</label>
+						</div>
+
+						<div class="medium-6 columns endDateInput">
+							<label>
+								<input type="date" placeholder="Fin du projet">
+								<span>Fin du projet</span>
+							</label>
+						</div>
+
+						<div class="columns">
+							<h3 class="text-center">Décrivez votre projet aux utilisateur d'Eklezia</h3>
+							<p class="text-center">
+								Qui cupiditate, recusandae? Nisi nesciunt, ex at corporis veritatis tempora dicta vitae, explicabo quidem excepturi suscipit unde numquam in quia. Delectus, impedit.
+							</p>
+							<textarea name="" id="" cols="30" rows="10"></textarea>						
+						</div>
+
+						<div class="columns projectImageAdd">
+							<h3 class="text-center">Ajouter une photo de Présentation</h3>
+							<p class="text-center">
+								Qui cupiditate, recusandae? Nisi nesciunt, ex at corporis veritatis tempora dicta vitae, explicabo quidem excepturi suscipit unde numquam in quia. Delectus, impedit.
+							</p>
+
+							<div  id="file-upload" class="columns">
+								<div class="upload"><a>
+									<span>
+										<i class="fa fa-camera"></i>
+										Ajouter une photo
+									</span>
+									<div class="files"><input type="file" id="files" name="files[]" multiple=""></div></a>
+								</div>
+								<div class="box">
+									<div class="info-box">Aucune photo ajoutée</div><div id="container"></div>
+								</div>
+							</div>
+
+						</div>	
+
+						<input type="submit" value="Créer mon projet" class="right">
+					</form>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- END OF OFF CANVAS WRAPPER -->
+		<!-- /////////////////////////////////////////////////////////// -->
+		<!-- ////////////////// CODE ENDS HERE //////////////////////// -->
+		<!-- /////////////////////////////////////////////////////////// -->
+
+
+
+		<a class="exit-off-canvas"></a>
+
+	</div>
+</div>
+
+
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/custom-file-input.js"></script>
+
+<script>
+	$(function() {
+		$('input').on('change', function() {
+			var input = $(this);
+			if (input.val().length) {
+				input.addClass('populated');
+			} else {
+				input.removeClass('populated');
+			}
+		});
+
+		setTimeout(function() {
+			$('#fname').trigger('focus');
+		}, 500);
+	});
+</script>
+
+
+<script>
+	var dragSrcEl = null;
+function handleDragStart(e) {
+// Target (this) element is the source node.
+             
+ dragSrcEl = this;
+ dragSrcEl.style.opacity = '0.4'
+                
+ e.dataTransfer.effectAllowed = 'move';
+ e.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragOver(e) {
+ if (e.preventDefault) {
+     e.preventDefault(); //  Allows us to drop.
+ }
+
+ e.dataTransfer.dropEffect = 'move';  
+ return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+  this.classList.add('over');
+}
+
+function handleDragLeave(e) {
+   this.classList.remove('over');  // this / e.target is previous target element.
+}
+function handleDrop(e) {
+  // this/e.target is current target element.
+  if (e.stopPropagation) {
+      e.stopPropagation(); // Stops some browsers from redirecting.
+  }
+  // Don't do anything if dropping the same column we're dragging.
+  if (dragSrcEl !== this) {
+   // Set the source column's HTML to the HTML of the column we dropped on.
+   dragSrcEl.innerHTML = this.innerHTML;
+   this.innerHTML = e.dataTransfer.getData('text/html');
+   dragSrcEl.style.opacity = '1';
+  }
+ return false;
+}
+//------ get files ---
+function handleFileSelect(evt) {
+ var files = evt.target.files; // FileList object
+ // Loop through the FileList and render image files as thumbnails.
+ for (var i = 0, f; f = files[i]; i++) {
+   // Only process image files.
+  if (!f.type.match('image.*')) {
+       continue;
+   }
+ var reader = new FileReader();
+ // Closure to capture the file information.
+ reader.onload = (function(theFile) {
+  return function(e) {
+  // Render thumbnail.
+   var div = document.createElement('div');
+   div.setAttribute("class", "box-image");
+   div.setAttribute("draggable", "true");
+   div.innerHTML = ['<img class="thumb" src="', e.target.result,'"title="', escape(theFile.name), '"/>' + '<span>' + escape(theFile.name) + '</span>'].join('');
+   setListenersToDiv(div);
+   document.getElementById('container').insertBefore(div, null);
+   };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+ }
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+ // set listeners for each div
+ function setListenersToDiv(div) {
+   div.addEventListener('dragstart', handleDragStart, false);
+   div.addEventListener('dragenter', handleDragEnter, false);
+   div.addEventListener('dragover', handleDragOver, false);
+   div.addEventListener('dragleave', handleDragLeave, false);
+   div.addEventListener('drop', handleDrop, false);
+}
+//remove empy
+$(".upload").click(function(){$(".info-box").remove();});
+
+  
+</script>
+
+
+</body>
+</html>
