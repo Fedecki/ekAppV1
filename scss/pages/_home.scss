@@ -34,15 +34,13 @@
 
 
 	.homeDiscover {
+
 		@media #{$small-only} {			
 			margin-top: 40%;
 		}		
 		@media #{$medium-up} {			
 			@include centre(both);
 		}
-
-
-
 		.ekDiscoverVideo {			
 			display: block;
 			margin: auto;				
@@ -92,69 +90,71 @@
 	}	
 
 	.homeSearchForm {		
-		//@include single-transition(all, 450ms, cubic-bezier(0.3,0,0.3,1) );
 		position: absolute;
 		width: 100%;
 		min-height: 50px !important;
 		bottom: 0 !important;
 		left: 0;
 		visibility: visible;
-		background: $ekleziaPrimary;
+		background: rgba($ekleziaPrimary, .7);
+		padding: 1rem;
 
 		form {
 			display: block;
 			@include clearfix;
 			width: 100% !important;
-			/* @media #{$small-up} {			
-				width: 50%;
-				} */				
+
+		}
+
+		ul {
+			padding-top: 0rem !important;
+			width: 100%;
+			position: relative;
+
+			li {
+				@include columnsReset;
+				display: block !important;										
 			}
 
-			ul {
-				padding-top: 0rem !important;
-				margin-top: 1.5rem !important;
-				width: 100%;
-				li {
-					margin-bottom: 0rem;
-					padding-bottom: 0;
-					display: block !important;										
-				}
-				.formSearchTile {
-					font-size: 1rem !important;
-					color: $white;
-					text-transform: uppercase;
-					font-weight: 300 !important;
-					letter-spacing: .1rem;
-					line-height: 250%;
-					text-align: center !important;
-					margin-bottom: 1rem;
-				}
-
-				a {
-					display: block;
-				}
-			}
-
-			.closeSearch {
-				@include single-transition;
+			.formSearchTile {
+				font-size: 1rem !important;
 				display: block;
-				position: absolute;
-				top: 0.75rem;
-				right: 1rem;
-				font-size: 150%;
-				color: rgba($white, 1);
-				&:hover {
-					cursor: pointer;
-				}				
+				margin-right: 1rem;
+				color: $white;
+				text-transform: uppercase;
+				font-weight: bold !important;
+				text-align: center !important;
+				line-height: 350%;
 			}
+
+			/* DESIGN INPUT */ 
+			.ekInput {
+				@include columnsReset;				
+				height: 50px;
+				border: none !important;
+				padding: .5rem !important;
+				border-right: solid 1px $jet;
+				background: $white;
+				color: $charcoal;
+				font-weight: bold;
+				text-align: center;
+				font-size: 1rem;
+				
+			}
+
+			/* INCLUDING STYLE FOR SEARCH CTA */
+			@include ekBtn (
+				$width: 200px,
+				$height :50px,
+				$btnBg : lighten($ekleziaPrimary, 15),
+				$txtColor : $white,
+				$txtSize: 1rem,
+				$iconColor :$white
+				);
 		}
 	}
+}
 
-/* .homeSearchFormExpanded {
-	display: block !important;
-	left: 0% !important;
-}	
-*/
 
 
 

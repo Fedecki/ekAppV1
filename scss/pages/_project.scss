@@ -2,40 +2,43 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
- .projectCover {
- 	position: relative;
- 	width: 100%;
- 	height: 380px;
- 	background: url(../images/pingouins.jpg) bottom center no-repeat;	
- 	@include coverBg;	
 
- 	.overlay {
- 		display: block;
- 		position: absolute;
- 		top: 0;
- 		left: 0;
- 		width: 100%;
- 		height: 100%;
- 		@include  bg-gradient(rgba($monsoon , .15),rgba($jet, .45));
- 	}
 
- 	.closeBtn {
- 		@include single-transition;
- 		@include radius(50%);
- 		display: block;
- 		position: absolute;
- 		top: 2rem;
- 		left: 1rem;
- 		width: 2.5rem;
- 		height: 2.5rem;
- 		font-size: 150%;
- 		text-align: center;		
- 		border: solid 2px $white;
 
- 		i {
- 			color: $white;
- 			line-height: 150%;
- 		}
+.projectCover {
+	position: relative;
+	width: 100%;
+	height: 380px;
+	background: url(../images/pingouins.jpg) bottom center no-repeat;	
+	@include coverBg;	
+
+	.overlay {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include  bg-gradient(rgba($monsoon , .15),rgba($jet, .45));
+	}
+
+	.closeBtn {
+		@include single-transition;
+		@include radius(50%);
+		display: block;
+		position: absolute;
+		top: 2rem;
+		left: 1rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		font-size: 150%;
+		text-align: center;		
+		border: solid 2px $white;
+
+		i {
+			color: $white;
+			line-height: 150%;
+		}
 
 		/* SET HOVER EFFECT */
 		&:hover {

@@ -46,16 +46,20 @@
 // 3 - base/
 @import "base/ek-default";
 
+
+// 5 - components/
+@import "components/buttons";
+@import "components/inputs";
+@import "components/modal";
+@import "components/off-canvas";
+@import "components/user-comments";
+
 // 4 - layout/
 @import "layout/topbar";
 @import "layout/footer";
 @import "layout/topbar-search";
 
-// 5 - components/
-@import "components/project-fixed-nav";
-@import "components/modal";
-@import "components/off-canvas";
-@import "components/user-comments";
+
 
 // 6 - pages/
 @import "pages/home";
@@ -68,8 +72,7 @@
 // 7 - themes/
 
 
-//MAIN CUSTOM FILE
-@import "custom";
+
 
 
 

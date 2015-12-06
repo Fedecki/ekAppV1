@@ -1,6 +1,7 @@
 // EKLEZIA TOPBAR
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+$btnTransition: all, 500ms, cubic-bezier(0.020, 0.465, 0.225, 0.950);
 
 // 1. TopBar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -65,8 +66,6 @@
 			@include radius(50%);
 		}
 	}
-
-
 
 	/* SET POSITION FOR NOTIFICATION COUNT ALERT */
 	.notifAlert {
@@ -213,22 +212,22 @@
 			border-bottom: solid 1px $silver;
 		}
 	} 
-
 }
 
 
 /* DEFINES TOP BAR DESIGN AFTER SCROLL */
 .fixed {	
-	@include single-transition(all, 500ms, ease-out);
+	@include single-transition(all, 300ms, ease-out);
 	@include clearfix;
 	background: rgba($white, 1);
 	width: 100%;
 	height: rem-calc(70);
-	-moz-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
-	-webkit-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
-	-o-box-shadow: 0px 2px 1px 1px rgba($jet, .25);
-	box-shadow: 0px 2px 1px 1px rgba($jet, .25);
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba($jet, .25), Direction=180, Strength=1);
+	-moz-box-shadow: 0px 2px 1px 1px rgba($jet, .15);
+	-webkit-box-shadow: 0px 2px 1px 1px rgba($jet, .15);
+	-o-box-shadow: 0px 2px 1px 1px rgba($jet, .15);
+	box-shadow: 0px 2px 1px 1px rgba($jet, .15);
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba($jet, .15), Direction=180, Strength=1);
+
 	.topBarSearch {		
 		i {
 			color: $ekleziaPrimary !important;
@@ -258,7 +257,6 @@
 }
 
 .subscribe > a {
-	@include radius(6px);
 	@include single-transition;	
 	border: solid 2px $white;
 	line-height: $topbar-height/2 !important;
@@ -269,6 +267,48 @@
 	}
 }
 
+
+.projectAddBtn {
+	@extend .subscribe;
+}
+
 .defaultTopBar {
 	@extend .fixed;
+}
+
+
+
+//TOPBAR SEARCH STYLE
+
+
+.headerSearchNav {
+	display: block;
+	background:$ekleziaPrimary;
+	height: $topbar-height;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 9999;
+	@include single-transition($btnTransition);
+	@include transform(translate(0, -$topbar-height));
+	&:hover {
+		cursor: pointer;
+	}
+	.closeSearch {
+		display: block;
+		position: absolute;
+		top:$topbar-height/3;
+		right: 10px; 
+		font-size: 1.5rem;
+		color: $white;
+		&:hover {
+			cursor: pointer;
+		}		
+	}
+
+}
+
+.headerSearchNav-expanded {
+	@include transform(translate(0, 0));
 }

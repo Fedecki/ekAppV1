@@ -1,8 +1,9 @@
 
+<html lang="fr">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Eklezia - La plateforme citoyenne qui change la vie réelle</title>
+	<title>Eklezia - Accueil</title>
 	<link rel="stylesheet" href="stylesheets/app.css" />
 </head>
 
@@ -37,12 +38,14 @@
 				<div class=" columns">
 					<i class="icon-lock"></i>
 					<input type="password" placeholder="Votre mot de passe">
-					<a href="" class="passwordShow">
-						<i class="icon-eye"></i>
-					</a>
 				</div>
 				<div class="columns">
-					<button class="button right success">Valider</button>
+					<button type="submit" class="ekBtn right"> 
+						<p class="btnText">Valider</p>
+						<span class="btnIcon">
+							<i class="fa fa-check"></i>
+						</span>
+					</button>
 				</div>                                                        
 			</form>
 			<!-- END SUBSCRIPTION FORM -->
@@ -75,7 +78,12 @@
 				</div>
 				<div class="columns">
 					<a href="" data-reveal-id="passwordReset" class="passwordResetLink left">Mot de passe oublié ?</a>
-					<button class="button right success">Valider</button>
+					<button type="submit" class="ekBtn right"> 
+						<p class="btnText">Valider</p>
+						<span class="btnIcon">
+							<i class="fa fa-check"></i>
+						</span>
+					</button>
 				</div>                                                
 			</form>
 			<!-- END SUBSCRIPTION FORM -->
@@ -101,7 +109,12 @@
 					<input type="email" placeholder="Votre email">
 				</div> 
 				<div class="columns">
-					<button class="button right success">Valider</button>
+					<button type="submit" class="ekBtn right"> 
+						<p class="btnText">Valider</p>
+						<span class="btnIcon">
+							<i class="fa fa-check"></i>
+						</span>
+					</button>
 				</div>                                                
 			</form>
 			<!-- END RESET FORM -->
@@ -110,6 +123,8 @@
 		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>
 	<!-- END OF LOGIN MODAL -->
+
+
 
 
 
@@ -141,24 +156,29 @@
 				<!-- /MENU FOR NO LOGGED USERS -->
 
 			</aside>
+
 			<!-- END OFF CANVAS WRAPPER -->
-
-
-
 
 
 			<!-- ALL PAGES CONTENT SHOULD BE WRITTEN AFTER INTO THIS SECTION	 -->
 			<section class="main-section">
 
+
+
 				<!-- FIRST SCREEN DESIGN  -->
 				<div class="row">
-
 					<!-- MAIN MENU NOT LOGGED DESKTOP - TABLET -->
-					<div class="contain-to-grid sticky ">
+					<div class="contain-to-grid sticky hide-for-small">
+
+						<div id="searchReveal" class="headerSearchNav">
+							<h2>Rechercher</h2>
+							<span class="closeSearch right"><i class="icon-close"></i></span>
+						</div>
+
 						<nav id="homeNav" class="top-bar" data-topbar role="navigation">
 							<ul class="title-area">
 								<li class="name">
-									<h1><a href="#">Eklezia</a></h1>
+									<h1><a href="index.html">Eklezia</a></h1>
 								</li>
 								<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -166,11 +186,10 @@
 							<section class="top-bar-section">
 								<!-- Left Nav Section -->
 								<ul class="left topBarSearch">
-									<a href=""><i class="fa fa-search"></i></a>                
+									<span href="" class="searchRevalBtn"><i class="fa fa-search"></i></span>                
 								</ul>
 								<!-- Right Nav Section -->
 								<ul class="right">
-
 									<!-- add class "noNewNotif" to hide notification count -->
 									<li class="topBarNotifications">
 										<a href=""> <i class="icon-bubble"></i> </a>
@@ -230,17 +249,16 @@
 											<li><a href="">Déconnexion</a></li>
 										</ul>
 									</li>
-									<li class="has-form">
-										<a href="project-add" class="button">Déposer un projet</a>
+									<li class="projectAddBtn">
+										<a href="project-add.html" >Déposer un projet</a>
 									</li>
-									<li class="login" data-reveal-id="userLogin"><a href="#">Login</a></li>
-									<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Subscribe</a></li>
+									<li class="login" data-reveal-id="userLogin"><a href="#">Connexion</a></li>
+									<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Inscription</a></li>
 								</ul>
 							</section>
 						</nav>
 					</div>
-					<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABLET -->
-
+					<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABL
 
 
 
@@ -269,14 +287,13 @@
 											<span class="formSearchTile right" for="">Chercher un projet</span>
 										</li>
 										<li>
-											<label for="">
-												<input type="text" placeholder="Localisation">
-												<!-- <span>Localisation</span> -->
+											<label>
+												<input class="ekInput" type="text" placeholder="Localisation">												
 											</label>
 											
 										</li>
 										<li>
-											<select name="projectCategory">
+											<select name="projectCategory" class="searchFormSelect" >
 												<option value="value1" selected>Toutes les catégories</option> 
 												<option value="value1">politique sociale / Santé</option> 
 												<option value="value2" >Justice / Sécurité</option>
@@ -289,7 +306,12 @@
 											</select>
 										</li>
 										<li>
-											<span href="#" class="button small left">Rechercher</span>
+											<button type="submit" class="ekBtn"> 
+												<p class="btnText">Rechercher</p>
+												<span class="btnIcon">
+													<i class="icon-magnifier"></i>
+												</span>
+											</button>
 										</li>
 									</ul>
 								</form>							
@@ -678,28 +700,67 @@
 
 
 
-
 	<script>
-		$('.smallMenuDisplay').click(function() {
-			$( "#formy" ).addClass( "homeSearchForm columns homeSearchFormExpanded");
-			$( this ).parent().addClass("homeClaimHide");
+		$('select').each(function(){
+			var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+			$this.addClass('select-hidden'); 
+			$this.wrap('<div class="select"></div>');
+			$this.after('<div class="select-styled"></div>');
+
+			var $styledSelect = $this.next('div.select-styled');
+			$styledSelect.text($this.children('option').eq(0).text());
+
+			var $list = $('<ul />', {
+				'class': 'select-options'
+			}).insertAfter($styledSelect);
+
+			for (var i = 0; i < numberOfOptions; i++) {
+				$('<li />', {
+					text: $this.children('option').eq(i).text(),
+					rel: $this.children('option').eq(i).val()
+				}).appendTo($list);
+			}
+
+			var $listItems = $list.children('li');
+
+			$styledSelect.click(function(e) {
+				e.stopPropagation();
+				$('div.select-styled.active').each(function(){
+					$(this).removeClass('active').next('ul.select-options').hide();
+				});
+				$(this).toggleClass('active').next('ul.select-options').toggle();
+			});
+
+			$listItems.click(function(e) {
+				e.stopPropagation();
+				$styledSelect.text($(this).text()).removeClass('active');
+				$this.val($(this).attr('rel'));
+				$list.hide();
+        //console.log($this.val());
+      });
+
+			$(document).click(function() {
+				$styledSelect.removeClass('active');
+				$list.hide();
+			});
+
 		});
+</script>
+
+
+<script>
+	$('.searchRevalBtn').click(function() {
+		$( "#searchReveal" ).addClass( "headerSearchNav-expanded");
+	});
 
 		$('.closeSearch').click(function() {
-			$( "#formy" ).removeClass( "homeSearchFormExpanded smallMenuDisplay");
-		});
+		$( "#searchReveal" ).removeClass( "headerSearchNav-expanded");
+	});
+</script>
 
 
-		$('.projectInfosBtn').click(function() {
-			$( this ).parent().removeClass( "caption").addClass("captionExpanded");
-			$( this ).addClass("closeCaption");				
-		});
 
-		$('.closeCaption').click(function() {
-			$( this ).parent().removeClass( "captionExpanded").addClass("caption");			
-		});
-
-	</script>
 
 
 

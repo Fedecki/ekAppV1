@@ -12,537 +12,404 @@
 <body>
 
 
-	<!-- OFF CANVAS MENU STARTS HERE DO NOT REMOVE -->
-
-	<div class="off-canvas-wrap" data-offcanvas>
-		<div class="inner-wrap">
-			<nav class="tab-bar show-for-small">
-				<section class="left-small">
-					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-				</section>
-
-				<section class="middle tab-bar-section">
-					<h1 class="title">Eklesia.org</h1>
-				</section>
-			</nav>
 
 
-			<!-- MENU FOR NO LOGGED USERS -->
-			<aside class="left-off-canvas-menu">
-				<ul class="off-canvas-list">  
-					<img class="ekLogo" src="images/ek-logo.png" alt="eklezia logo">	
-					<li><a href="#" data-reveal-id="menuLSubscribe">Accueil</a></li>
-					<li><a href="#">Rechercher</a></li>
-					<li><a href="#">Découvrir</a></li>
-					<li><a href="#">Le blog</a></li>
-				</ul>
-				<!-- /MENU FOR NO LOGGED USERS -->
+	<section class="dashboardWrapper">
 
-			</aside>
+		<div class="dashboardCover">
+			<span class="overlay">
+				<img class="userAvatar" src="images/ek-user.jpg" alt="">
+				<h1 class="text-center">User Name</h1>
+				<div class="db-userLocation">
+					<i class="icon-location-pin"></i>
+					<span>Charleville mezieres</span>
+				</div>
+			</span>
+			<ul class="tabs" data-tab>
+				<li class="tab-title active"><a href="#panel1">Accueil</a></li>
+				<li class="tab-title"><a href="#panel2">Mes projets</a></li>
+				<li class="tab-title"><a href="#panel3">Paramètres</a></li>
+			</ul>
+		</div>
 
-			<!-- END OFF CANVAS WRAPPER -->
-
-
-			<!-- ALL PAGES CONTENT SHOULD BE WRITTEN AFTER INTO THIS SECTION	 -->
-			<section class="main-section">
-
-				<!-- FIRST SCREEN DESIGN  -->
-				<div class="row">
-					<!-- MAIN MENU NOT LOGGED DESKTOP - TABLET -->
-					<div class="contain-to-grid sticky hide-for-small">
-						<nav id="homeNav" class="top-bar" data-topbar role="navigation">
-							<ul class="title-area">
-								<li class="name">
-									<h1><a href="#">Eklezia</a></h1>
-								</li>
-								<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-							</ul>
-							<section class="top-bar-section">
-								<!-- Left Nav Section -->
-								<ul class="left topBarSearch">
-									<a href=""><i class="fa fa-search"></i></a>                
-								</ul>
-								<!-- Right Nav Section -->
-								<ul class="right">
-
-									<!-- add class "noNewNotif" to hide notification count -->
-									<li class="topBarNotifications">
-										<a href=""> <i class="icon-bubble"></i> </a>
-										<span class="notifAlert">
-											1
-										</span>
-										<!-- Notifications List Design -->
-										<ul class="notifList">
-											<header>
-												<h5>Notifications</h5>
-												<a href="" class="notifAllRead">Marquer comme lu</a>
-											</header>
-											<!-- unread Notifications class -->
-											<li class="unreadNotification" data-equalizer >									
-												<div class="notifIcon" data-equalizer-watch >
-													<i class="icon-star"></i>
-												</div>
-												<div class="notifContent " data-equalizer-watch >
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ducimus id voluptates neque <a href=""> illum non</a> necessitatibus, perspiciatis.</p>
-												</div>												
-											</li>
-											<li data-equalizer >									
-												<div class="notifIcon columns" data-equalizer-watch >
-													<i class="fa fa-users"></i>
-												</div>
-												<div class="notifContent columns" data-equalizer-watch >
-													<p> Magni ducimus id voluptates neque <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
-												</div>												
-											</li>
-											<li data-equalizer >											
-												<div class="notifIcon columns" data-equalizer-watch >
-													<i class="fa fa-thumbs-up"></i>
-												</div>
-												<div class="notifContent columns" data-equalizer-watch >
-													<p> <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
-												</div>												
-											</li>	
-											<li data-equalizer >											
-												<div class="notifIcon columns" data-equalizer-watch >
-													<img src="images/userPic.png" alt="">
-												</div>
-												<div class="notifContent columns" data-equalizer-watch >
-													<p> <a href="">consequuntur illum non</a> necessitatibus, perspiciatis, reprehenderit totam.</p>
-												</div>												
-											</li>						
-										</ul>										
-									</li>
-									<li class="topBarUserMenu has-dropdown">
-										<a href=""> <img src="images/userPic.png" alt="">
-											<span>User Name</span>
-										</a>
-										<ul class="dropdown">
-											<li><a href="">Profil</a></li>
-											<li><a href="">Projets favoris</a></li>
-											<li><a href="">Paramètres</a></li>
-											<li><a href="">Inviter des amis</a></li>
-											<li><a href="">Déconnexion</a></li>
-										</ul>
-									</li>
-									<li class="has-form">
-										<a href="project-add" class="button">Déposer un projet</a>
-									</li>
-									<li class="login" data-reveal-id="userLogin"><a href="#">Login</a></li>
-									<li class="subscribe" data-reveal-id="userSubscribe"><a href="#">Subscribe</a></li>
-								</ul>
-							</section>
-						</nav>
-					</div>
-					<!-- END OF MAIN MENU NOT LOGGED DESKTOP - TABLET -->
-
-
-
-
-					<section class="dashboardWrapper">
-
-						<div class="dashboardCover">
-							<span class="overlay">
-								<img class="userAvatar" src="images/ek-user.jpg" alt="">
-								<h1 class="text-center">User Name</h1>
-								<div class="db-userLocation">
-									<i class="icon-location-pin"></i>
-									<span>Charleville mezieres</span>
-								</div>
-							</span>
-							<ul class="tabs" data-tab>
-								<li class="tab-title active"><a href="#panel1">Accueil</a></li>
-								<li class="tab-title"><a href="#panel2">Mes projets</a></li>
-								<li class="tab-title"><a href="#panel3">Paramètres</a></li>
-							</ul>
-						</div>
-
-						<div class="tabs-content">
-							<div class="content  active" id="panel1">
-								<div class="db-HomeContent">
-									<h2>Home</h2>
-									<ul class="ekUser-stats">
-										<li>
-											<div class="columns">
-												<i class="icon-badge"></i>
-												<span class="dataCount">3</span>
-												<span class="dataLabel">Projets déposés</span>	
-											</div>
-										</li>
-										<li>
-											<div class="columns">
-												<i class="icon-like"></i>
-												<span class="dataCount">28</span>
-												<span class="dataLabel">Projets votés</span>	
-											</div>
-										</li>
-										<li>	
-											<div class="columns">
-												<i class="icon-bubble"></i>
-												<span class="dataCount">19</span>
-												<span class="dataLabel">Commentaires laissés</span>	
-											</div>											
-										</li>
-									</ul>
-								</div>
+		<div class="tabs-content">
+			<div class="content  active" id="panel1">
+				<div class="db-HomeContent">
+					<h2>Home</h2>
+					<ul class="ekUser-stats">
+						<li>
+							<div class="columns">
+								<i class="icon-badge"></i>
+								<span class="dataCount">3</span>
+								<span class="dataLabel">Projets déposés</span>	
 							</div>
-							<div class="content" id="panel2">
-								<h2>Projects</h2>
-								<dl class="sub-nav">
-									<dt>Filter:</dt>
-									<dd class="active"><a href="#">Mes projets</a></dd>
-									<dd><a href="#">Favoris</a></dd>
-									<dd><a href="#">Près de chez moi</a></dd>
-								</dl>
-
-								<div class="columns">
-
-									<ul class="small-block-grid-1 medium-block-grid-4">
-
-										<li >
-											<a href="project.html">									
-												<figure class="projectPreview2" data-equalizer-watch="list">
-													<span class="addFav"><i class="icon-heart"></i></span>
-													<img src="images/pingouins2.jpg" alt="project image"/>
-													<figcaption>
-														<span class="categoryIcon">
-															<i class="icon-globe-alt"></i>
-														</span>																				
-														<h2>Sauvons les pingouins ! et la banquise</h2>
-														<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
-														<ul class="projectDataList">
-															<li>
-																<i class="icon-calendar"></i>
-																<span class="projectData">12 jours</span>													
-															</li>
-															<li>
-																<i class="icon-like"></i>
-																<span class="projectData">6739 votes</span>			
-															</li>
-														</ul>
-													</figcaption>
-												</figure>
-											</a>
-										</li>
-
-										<li >
-											<a href="project.html">									
-												<figure class="projectPreview2" data-equalizer-watch="list">
-													<span class="addFav"><i class="icon-heart"></i></span>
-													<img src="images/pingouins2.jpg" alt="project image"/>
-													<figcaption>
-														<span class="categoryIcon">
-															<i class="icon-globe-alt"></i>
-														</span>																				
-														<h2>Sauvons les pingouins ! et la banquise</h2>
-														<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
-														<ul class="projectDataList">
-															<li>
-																<i class="icon-calendar"></i>
-																<span class="projectData">12 jours</span>													
-															</li>
-															<li>
-																<i class="icon-like"></i>
-																<span class="projectData">6739 votes</span>			
-															</li>
-														</ul>
-													</figcaption>
-												</figure>
-											</a>
-										</li>
-
-										<li >
-											<a href="project.html">									
-												<figure class="projectPreview2" data-equalizer-watch="list">
-													<span class="addFav"><i class="icon-heart"></i></span>
-													<img src="images/pingouins2.jpg" alt="project image"/>
-													<figcaption>
-														<span class="categoryIcon">
-															<i class="icon-globe-alt"></i>
-														</span>																				
-														<h2>Sauvons les pingouins ! et la banquise</h2>
-														<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
-														<ul class="projectDataList">
-															<li>
-																<i class="icon-calendar"></i>
-																<span class="projectData">12 jours</span>													
-															</li>
-															<li>
-																<i class="icon-like"></i>
-																<span class="projectData">6739 votes</span>			
-															</li>
-														</ul>
-													</figcaption>
-												</figure>
-											</a>
-										</li>																		
-
-									</ul>
-								</div>
+						</li>
+						<li>
+							<div class="columns">
+								<i class="icon-like"></i>
+								<span class="dataCount">28</span>
+								<span class="dataLabel">Projets votés</span>	
 							</div>
-
-							<div class="content" id="panel3">
-								<h2>Paramètres du compte</h2>
-
-								<div class="row">
-									<aside>
-										<ul class="side-nav">
-										<li><a href="#"><i class="fa fa-user"></i>Informations du compte</a></li>
-											<li><a href="#"><i class="fa fa-lock"></i> Sécurité</a></li>
-											<li><a href="#"><i class="fa fa-comment"></i> Notifications</a></li>
-										</ul>
-									</aside>
-
-									<div class="db-formInfos columns">
-										<h3 class="text-center">Informations personnelles</h3>
-
-										<form action="">
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Prénom</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="text" id="right-label" placeholder="Inline Text Input">
-												</div>
-											</div>
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Nom</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="text" id="right-label" placeholder="Inline Text Input">
-												</div>
-											</div>	
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Ville principale</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="text" id="right-label" placeholder="Inline Text Input">
-												</div>
-												<p class="db-cityAdd right"><i class="fa fa-plus"></i>Ajouter une ville</p>
-											</div>											
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Emai</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="text" id="right-label" placeholder="Inline Text Input">
-												</div>
-											</div>
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">A propos</label>
-												</div>
-												<div class="small-9 columns">
-													<textarea name="" id="" cols="30" rows="10" s="Votre description"></textarea>
-												</div>
-											</div>													
-										</form>
-									</div>
-									<!-- END OFF USER INFOS -->
-
-
-									<!-- USER SECURITY -->
-									<div class="db-security columns">
-										<h3>Sécurité</h3>
-										<form action="">
-											<h4>Changement de mot de passe</h4>
-
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Ancien mot de passe</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="password" id="right-label" placeholder="Ancien mot de passe">
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Nouveau mot de passe</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="password" id="right-label" placeholder="Nouveau mot de passe">
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="small-3 columns">
-													<label for="right-label" class="right">Confirmez mot de passe</label>
-												</div>
-												<div class="small-9 columns">
-													<input type="password" id="right-label" placeholder="Nouveau mot de passe">
-												</div>
-											</div>												
-											<button class="right">Valider</button>
-										</form>
-									</div>
-									<!-- END OFF USER SECURITY -->
-
-									<!-- USER NOTIFICATIONS -->
-									<div class="db-notifications columns">
-										<h3>Notifications</h3>
-										<form action="">
-
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif1" type="checkbox">
-														<label for="notif1"></label>
-													</div> 
-												</div>
-											</div>	
-
-
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif2" type="checkbox">
-														<label for="notif2"></label>
-													</div> 
-												</div>
-											</div>	
-
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif3" type="checkbox">
-														<label for="notif3"></label>
-													</div> 
-												</div>
-											</div>	
-
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif4" type="checkbox">
-														<label for="notif4"></label>
-													</div> 
-												</div>
-											</div>																							
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif5" type="checkbox"
-														<label for="notif5"></label>
-													</div> 
-												</div>
-											</div>	
-
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif6" type="checkbox">
-														<label for="notif6"></label>
-													</div> 
-												</div>
-											</div>																							
-											<div class="row">
-												<div class="small-10 columns">
-													<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
-												</div>
-												<div class="small-2 columns">
-													<div class="switch right">
-														<input id="notif7" type="checkbox">
-														<label for="notif7"></label>
-													</div> 
-												</div>
-											</div>		
-
-											<button class="right">Valider</button>										
-
-										</form>
-									</div>
-									<!-- END OF USER NOTIFICATIONS -->
-								</div>								
-							</div>
-							<!-- END OF PANEL 3 -->
-						</div>
-						<!-- END OF TAB CONTENT -->
-					</section>
-
-
-
-
-
-
-
-					<footer>
-						<div class="row">
-							<div class="small-12 medium-4 columns">
-								<img class="ek-logo" src="http://www.placehold.it/100x75" alt="">
-								<p>
-									Similique assumenda quo sed, accusamus exercitationem earum nulla consequatur laborum cum ratione doloremque quasi quam libero recusandae maiores iusto consequuntur ea numquam.
-								</p>
-								<ul class="small-block-grid-3">
-									<li>  <a href=""> <i class="icon-social-facebook"></i> </a> </li>
-									<li>  <a href=""> <i class="icon-social-twitter"></i>	 </a> </li>
-									<li>  <a href=""> <i class="fa fa-google"></i>	 </a> </li>
-								</ul>
-							</div>
-							<div class="small-12 medium-4 columns">
-								<h5>Main sub section title</h5>
-								<ul>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-								</ul>
-							</div>
-							<div class="small-12 medium-4 columns">
-								<h5>Main sub section title</h5>
-								<ul>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-									<li><a href="">this is a link !</a></li>
-								</ul>                       
-							</div>					
-
-						</div>
-					</footer>
-
-
-				</section>          
-				<!-- END OF OFF CANVAS WRAPPER -->
-
-				<!-- ALLOW OFF CANVAS CLOSE -->
-				<a class="exit-off-canvas"> </a>
+						</li>
+						<li>	
+							<div class="columns">
+								<i class="icon-bubble"></i>
+								<span class="dataCount">19</span>
+								<span class="dataLabel">Commentaires laissés</span>	
+							</div>											
+						</li>
+					</ul>
+				</div>
 			</div>
-			<!-- END OFF INNER WRAP -->
-		</div> 
-		<!-- END OFF CANVAS WRAP -->
-		<!-- NO CONTENT SHOULD BE INCUDED AFTER -->
+			<div class="content" id="panel2">
+				<h2>Projects</h2>
+				<dl class="sub-nav">
+					<dt>Filter:</dt>
+					<dd class="active"><a href="#">Mes projets</a></dd>
+					<dd><a href="#">Favoris</a></dd>
+					<dd><a href="#">Près de chez moi</a></dd>
+				</dl>
+
+				<div class="columns">
+
+					<ul class="small-block-grid-1 medium-block-grid-4">
+
+						<li >
+							<a href="project.html">									
+								<figure class="projectPreview2" data-equalizer-watch="list">
+									<span class="addFav"><i class="icon-heart"></i></span>
+									<img src="images/pingouins2.jpg" alt="project image"/>
+									<figcaption>
+										<span class="categoryIcon">
+											<i class="icon-globe-alt"></i>
+										</span>																				
+										<h2>Sauvons les pingouins ! et la banquise</h2>
+										<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+										<ul class="projectDataList">
+											<li>
+												<i class="icon-calendar"></i>
+												<span class="projectData">12 jours</span>													
+											</li>
+											<li>
+												<i class="icon-like"></i>
+												<span class="projectData">6739 votes</span>			
+											</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+
+						<li >
+							<a href="project.html">									
+								<figure class="projectPreview2" data-equalizer-watch="list">
+									<span class="addFav"><i class="icon-heart"></i></span>
+									<img src="images/pingouins2.jpg" alt="project image"/>
+									<figcaption>
+										<span class="categoryIcon">
+											<i class="icon-globe-alt"></i>
+										</span>																				
+										<h2>Sauvons les pingouins ! et la banquise</h2>
+										<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+										<ul class="projectDataList">
+											<li>
+												<i class="icon-calendar"></i>
+												<span class="projectData">12 jours</span>													
+											</li>
+											<li>
+												<i class="icon-like"></i>
+												<span class="projectData">6739 votes</span>			
+											</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+
+						<li >
+							<a href="project.html">									
+								<figure class="projectPreview2" data-equalizer-watch="list">
+									<span class="addFav"><i class="icon-heart"></i></span>
+									<img src="images/pingouins2.jpg" alt="project image"/>
+									<figcaption>
+										<span class="categoryIcon">
+											<i class="icon-globe-alt"></i>
+										</span>																				
+										<h2>Sauvons les pingouins ! et la banquise</h2>
+										<h3><!-- <i class="icon-location-pin"></i> -->Terre entière</h3>								
+										<ul class="projectDataList">
+											<li>
+												<i class="icon-calendar"></i>
+												<span class="projectData">12 jours</span>													
+											</li>
+											<li>
+												<i class="icon-like"></i>
+												<span class="projectData">6739 votes</span>			
+											</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</a>
+						</li>																		
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="content" id="panel3">
+				<h2>Paramètres du compte</h2>
+
+				<div class="row">
+					<aside>
+						<ul class="side-nav">
+							<li><a href="#"><i class="fa fa-user"></i>Informations du compte</a></li>
+							<li><a href="#"><i class="fa fa-lock"></i> Sécurité</a></li>
+							<li><a href="#"><i class="fa fa-comment"></i> Notifications</a></li>
+						</ul>
+					</aside>
+
+					<div class="db-formInfos columns">
+						<h3 class="text-center">Informations personnelles</h3>
+
+						<form action="">
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Prénom</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="text" id="right-label" placeholder="Inline Text Input">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Nom</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="text" id="right-label" placeholder="Inline Text Input">
+								</div>
+							</div>	
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Ville principale</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="text" id="right-label" placeholder="Inline Text Input">
+								</div>
+								<p class="db-cityAdd right"><i class="fa fa-plus"></i>Ajouter une ville</p>
+							</div>											
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Emai</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="text" id="right-label" placeholder="Inline Text Input">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">A propos</label>
+								</div>
+								<div class="small-9 columns">
+									<textarea name="" id="" cols="30" rows="10" s="Votre description"></textarea>
+								</div>
+							</div>													
+						</form>
+					</div>
+					<!-- END OFF USER INFOS -->
+
+
+					<!-- USER SECURITY -->
+					<div class="db-security columns">
+						<h3>Sécurité</h3>
+						<form action="">
+							<h4>Changement de mot de passe</h4>
+
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Ancien mot de passe</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="password" id="right-label" placeholder="Ancien mot de passe">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Nouveau mot de passe</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="password" id="right-label" placeholder="Nouveau mot de passe">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="small-3 columns">
+									<label for="right-label" class="right">Confirmez mot de passe</label>
+								</div>
+								<div class="small-9 columns">
+									<input type="password" id="right-label" placeholder="Nouveau mot de passe">
+								</div>
+							</div>												
+							<button class="right">Valider</button>
+						</form>
+					</div>
+					<!-- END OFF USER SECURITY -->
+
+					<!-- USER NOTIFICATIONS -->
+					<div class="db-notifications columns">
+						<h3>Notifications</h3>
+						<form action="">
+
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif1" type="checkbox">
+										<label for="notif1"></label>
+									</div> 
+								</div>
+							</div>	
+
+
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif2" type="checkbox">
+										<label for="notif2"></label>
+									</div> 
+								</div>
+							</div>	
+
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif3" type="checkbox">
+										<label for="notif3"></label>
+									</div> 
+								</div>
+							</div>	
+
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif4" type="checkbox">
+										<label for="notif4"></label>
+									</div> 
+								</div>
+							</div>																							
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif5" type="checkbox"
+										<label for="notif5"></label>
+									</div> 
+								</div>
+							</div>	
+
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif6" type="checkbox">
+										<label for="notif6"></label>
+									</div> 
+								</div>
+							</div>																							
+							<div class="row">
+								<div class="small-10 columns">
+									<label for="left-label" class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum sit repellendus laboriosam minima commodi suscipit inventoree.</label>
+								</div>
+								<div class="small-2 columns">
+									<div class="switch right">
+										<input id="notif7" type="checkbox">
+										<label for="notif7"></label>
+									</div> 
+								</div>
+							</div>		
+
+							<button class="right">Valider</button>										
+
+						</form>
+					</div>
+					<!-- END OF USER NOTIFICATIONS -->
+				</div>								
+			</div>
+			<!-- END OF PANEL 3 -->
+		</div>
+		<!-- END OF TAB CONTENT -->
+	</section>
 
 
 
-		<script src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="bower_components/foundation/js/foundation.min.js"></script>
-		<script src="js/app.js"></script>
 
 
 
 
-	</body>
-	</html>
+	<footer>
+		<div class="row">
+			<div class="small-12 medium-4 columns">
+				<img class="ek-logo" src="http://www.placehold.it/100x75" alt="">
+				<p>
+					Similique assumenda quo sed, accusamus exercitationem earum nulla consequatur laborum cum ratione doloremque quasi quam libero recusandae maiores iusto consequuntur ea numquam.
+				</p>
+				<ul class="small-block-grid-3">
+					<li>  <a href=""> <i class="icon-social-facebook"></i> </a> </li>
+					<li>  <a href=""> <i class="icon-social-twitter"></i>	 </a> </li>
+					<li>  <a href=""> <i class="fa fa-google"></i>	 </a> </li>
+				</ul>
+			</div>
+			<div class="small-12 medium-4 columns">
+				<h5>Main sub section title</h5>
+				<ul>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+				</ul>
+			</div>
+			<div class="small-12 medium-4 columns">
+				<h5>Main sub section title</h5>
+				<ul>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+					<li><a href="">this is a link !</a></li>
+				</ul>                       
+			</div>					
+
+		</div>
+	</footer>
+
+
+	
+	<!-- NO CONTENT SHOULD BE INCUDED AFTER -->
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/foundation/js/foundation.min.js"></script>
+	<script src="js/app.js"></script>
+
+
+
+
+</body>
+</html>
