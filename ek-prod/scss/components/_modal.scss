@@ -1,0 +1,109 @@
+// EKLEZIA MODAL DESIGN
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+/* BG COLOR AND OTHER PROPERTIES ARE SET IN THE CONFIG.SCSS FILE */
+.reveal-modal {
+	/* CHANGE ASPECT OF CLOSE BUTTON */
+	.close-reveal-modal {
+		border: solid 3px $white;
+		width: rem-calc(48);
+		height: rem-calc(48);
+		text-align: center;
+		@include radius(50%);
+		font-size: 2rem;
+		line-height: 125% !important;
+		@include single-transition;
+		&:hover {
+			background: $white;
+			border: solid 3px $white;
+			color: $ekleziaPrimary;
+		}
+	}
+
+	img {
+		max-width: rem-calc(40);
+		height: auto;
+		display: block;
+		margin: auto;
+	}
+
+	.modalBody {
+		@include centre(both);
+		h2,
+		p {
+			color: $white;
+		}
+
+		h2 {
+			margin: 2rem .5rem;
+		}			
+	}
+}
+
+
+
+
+// c. LOGIN & SUBSCRIBE MODAL DESIGN
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#userSubscribe,
+#userLogin,
+#passwordReset {
+	@media #{$medium-up} {
+		form {
+			display: block;
+			width: 33%;
+			margin: auto;
+		}
+	}
+
+	form {
+		position: relative;
+		input {
+			display: block;
+			background: $ekleziaPrimary;
+			border: none;
+			border-bottom: solid 4px $white;
+			height: 3.5rem !important;
+			color: $white;
+			font-weight: $font-weight-bold;
+			padding-left: 5%;
+			@include single-transition;
+			&:focus {
+				background: darken($ekleziaPrimary, 10);
+				border-bottom: solid 4px lighten($ekleziaPrimary, 10);
+			}
+		}
+
+		i {
+			position: absolute;
+			display: block;
+			font-size: 1.5rem;
+			bottom: 42.5%;
+			right: 5%;
+			color:$white;
+		}
+
+
+		@include ekBtn (
+			$width: 200px,
+			$height :50px,
+			$btnBg : $success-color,
+			$txtColor : $white,
+			$txtSize: 1rem,
+			$iconColor :$white
+			);
+
+	}
+}
+
+
+.passwordResetLink {
+	color: $white;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: 1rem;
+}
