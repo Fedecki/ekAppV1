@@ -1,0 +1,88 @@
+ // EKLEZIA CUSTOM STYLES
+// V1.00 -- NOV 15
+// Last edition : 29/11/2015
+// Author   	: Romain DAO (romaindao@gmail.com)
+
+ 
+
+@import "settings";     
+
+// Or selectively include components
+@import
+
+"foundation/components/block-grid",
+"foundation/components/buttons",
+"foundation/components/clearing",
+"foundation/components/dropdown",
+"foundation/components/forms",
+"foundation/components/grid",
+"foundation/components/inline-lists",
+"foundation/components/labels",
+"foundation/components/orbit",
+"foundation/components/panels",
+"foundation/components/reveal",
+"foundation/components/side-nav",
+"foundation/components/sub-nav",
+"foundation/components/switches",
+"foundation/components/tables",
+"foundation/components/tabs",
+"foundation/components/tooltips",
+"foundation/components/top-bar",
+"foundation/components/type",
+"foundation/components/offcanvas",
+"foundation/components/visibility";
+
+
+
+
+/* CUSTOM IMPORT */
+
+
+
+// 1 - utils/
+@import "utils/mixins";
+// 2 - vendors/
+
+// 3 - base/
+@import "base/ek-default";
+
+
+// 5 - components/
+@import "components/buttons";
+@import "components/inputs";
+@import "components/modal";
+@import "components/off-canvas";
+@import "components/user-comments";
+
+// 4 - layout/
+@import "layout/topbar";
+@import "layout/footer";
+@import "layout/topbar-search";
+
+
+
+// 6 - pages/
+@import "pages/home";
+@import "pages/result";
+@import "pages/project";
+@import "pages/dashboard";
+@import "pages/project-add";
+@import "pages/user-subscribe-infos";
+
+// 7 - themes/
+
+
+
+
+
+
+/* Font Awesome v4.3.0 - http://fontawesome.io - @fontawesome */
+
+@import 
+ "fonts/font-awesome";
+
+
+/* Import simple-line-icons | https://github.com/thesabbir/simple-line-icons  */
+
+@import 
+ "../bower_components/simple-line-icons/scss/simple-line-icons";

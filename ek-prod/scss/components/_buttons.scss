@@ -1,0 +1,83 @@
+// EKLEZIA BUTTON STYLES
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
+	transition: $property $speed $ease;
+}
+
+$btnTransition: all, 500ms, cubic-bezier(0.020, 0.465, 0.225, 0.950);
+
+button[type="$button-list"] {
+	all:unset;
+}
+
+
+/* DESIGN FOR BASE BUTTON */
+
+@mixin ekBtn($width,$height,$btnBg,$txtColor,$txtSize,$iconColor) {
+	
+
+	.ekBtn {
+		@include single-transition($btnTransition);
+		position: relative;
+		overflow: hidden;
+		text-align : center;
+		cursor : pointer;
+		width: $width;
+		height: $height;
+		background: $btnBg;
+		border: none !important;
+		outline: none !important;
+		.btnText {		
+			@include single-transition($btnTransition);				
+			@include transform(translate(0px, 0));
+			@include centre(both);
+			color: $txtColor;
+			font-size: $txtSize;
+		}
+
+		.btnIcon {
+			@include single-transition($btnTransition);
+			@include transform(translate(-$width/4, 0));
+			display: block !important;
+			width: $width/4;
+			height: $height;
+			position: absolute;
+			top:0;
+			left:0;
+			height: $height !important;
+			background: darken($btnBg, 10);
+
+			/* ICON STYLE */
+			> i {
+				@include centre(both);
+				color: white;				
+				font-size: $txtSize;
+				//text-align: center !important;
+			}
+		}
+
+		/* DEFINES HOVER ANIMATION */
+		&:hover {
+			.btnText {
+				margin-left: 30px;
+			}
+
+			.btnIcon {
+				@include transform(translate(0px, 0));
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

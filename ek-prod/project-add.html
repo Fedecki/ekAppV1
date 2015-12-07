@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Eklezia</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+		<section class="projectAddWrapper">
+			<div class="row">
+				
+				<div class="small-10 small-centered columns">
+					<img class="ekLogo" src="images/ek-logo.png" alt="">
+					<h1 class="text-center">Créer un projet sur Eklezia</h1>
+					<p class="text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo facilis nostrum delectus ea! Earum quod cumque at non maiores fugit fuga, ad eveniet recusandae eos nulla voluptate, laboriosam ipsam laborum.
+					</p>
+					<form>
+						<div class="columns">
+							<label>
+								<input id="fname" type="text" placeholder="Le titre de votre projet">
+								<span>Le titre de votre projet</span>
+							</label>
+						</div>
+
+						<div class="medium-6 columns">
+							<label>
+								<input type="text" placeholder="Localisation">
+								<span>Localisation</span>
+							</label>
+						</div>
+
+						<div class="medium-6 columns endDateInput">
+							<label>
+								<input type="date" placeholder="Fin du projet">
+								<span>Fin du projet</span>
+							</label>
+						</div>
+
+						<div class="columns">
+							<h3 class="text-center">Décrivez votre projet aux utilisateur d'Eklezia</h3>
+							<p class="text-center">
+								Qui cupiditate, recusandae? Nisi nesciunt, ex at corporis veritatis tempora dicta vitae, explicabo quidem excepturi suscipit unde numquam in quia. Delectus, impedit.
+							</p>
+							<textarea name="" id="" cols="30" rows="10"></textarea>						
+						</div>
+
+						<div class="columns projectImageAdd">
+							<h3 class="text-center">Ajouter une photo de Présentation</h3>
+							<p class="text-center">
+								Qui cupiditate, recusandae? Nisi nesciunt, ex at corporis veritatis tempora dicta vitae, explicabo quidem excepturi suscipit unde numquam in quia. Delectus, impedit.
+							</p>
+
+							<div  id="file-upload" class="columns">
+								<div class="upload"><a>
+									<span>
+										<i class="fa fa-camera"></i>
+										Ajouter une photo
+									</span>
+									<div class="files"><input type="file" id="files" name="files[]" multiple=""></div></a>
+								</div>
+								<div class="box">
+									<div class="info-box">Aucune photo ajoutée</div><div id="container"></div>
+								</div>
+							</div>
+
+						</div>	
+
+						<input type="submit" value="Créer mon projet" class="right">
+					</form>
+				</div>
+
+			</div>
+		</section>
+
+
+
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/foundation.min.js"></script>
+
+
+
+<script>
+	$(function() {
+		$('input').on('change', function() {
+			var input = $(this);
+			if (input.val().length) {
+				input.addClass('populated');
+			} else {
+				input.removeClass('populated');
+			}
+		});
+
+		setTimeout(function() {
+			$('#fname').trigger('focus');
+		}, 500);
+	});
+</script>
+
+
+<script>
+	var dragSrcEl = null;
+function handleDragStart(e) {
+// Target (this) element is the source node.
+             
+ dragSrcEl = this;
+ dragSrcEl.style.opacity = '0.4'
+                
+ e.dataTransfer.effectAllowed = 'move';
+ e.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragOver(e) {
+ if (e.preventDefault) {
+     e.preventDefault(); //  Allows us to drop.
+ }
+
+ e.dataTransfer.dropEffect = 'move';  
+ return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+  this.classList.add('over');
+}
+
+function handleDragLeave(e) {
+   this.classList.remove('over');  // this / e.target is previous target element.
+}
+function handleDrop(e) {
+  // this/e.target is current target element.
+  if (e.stopPropagation) {
+      e.stopPropagation(); // Stops some browsers from redirecting.
+  }
+  // Don't do anything if dropping the same column we're dragging.
+  if (dragSrcEl !== this) {
+   // Set the source column's HTML to the HTML of the column we dropped on.
+   dragSrcEl.innerHTML = this.innerHTML;
+   this.innerHTML = e.dataTransfer.getData('text/html');
+   dragSrcEl.style.opacity = '1';
+  }
+ return false;
+}
+//------ get files ---
+function handleFileSelect(evt) {
+ var files = evt.target.files; // FileList object
+ // Loop through the FileList and render image files as thumbnails.
+ for (var i = 0, f; f = files[i]; i++) {
+   // Only process image files.
+  if (!f.type.match('image.*')) {
+       continue;
+   }
+ var reader = new FileReader();
+ // Closure to capture the file information.
+ reader.onload = (function(theFile) {
+  return function(e) {
+  // Render thumbnail.
+   var div = document.createElement('div');
+   div.setAttribute("class", "box-image");
+   div.setAttribute("draggable", "true");
+   div.innerHTML = ['<img class="thumb" src="', e.target.result,'"title="', escape(theFile.name), '"/>' + '<span>' + escape(theFile.name) + '</span>'].join('');
+   setListenersToDiv(div);
+   document.getElementById('container').insertBefore(div, null);
+   };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+ }
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+ // set listeners for each div
+ function setListenersToDiv(div) {
+   div.addEventListener('dragstart', handleDragStart, false);
+   div.addEventListener('dragenter', handleDragEnter, false);
+   div.addEventListener('dragover', handleDragOver, false);
+   div.addEventListener('dragleave', handleDragLeave, false);
+   div.addEventListener('drop', handleDrop, false);
+}
+//remove empy
+$(".upload").click(function(){$(".info-box").remove();});
+
+  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+// EKLEZIA OFF CANVAS MENU
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+// Off Canvas Design
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.off-canvas-list {
+	margin-top: 2rem !important;
+	@include clearfix;
+	//@include centre(both);
+	margin-top: 0rem !important;
+	.ekLogo {
+		display: block;
+		padding: 1rem;
+		max-width: rem-calc(48);
+		max-height: auto;
+		margin: auto;
+	}
+	li > a {
+		font-weight:300 !important;
+		text-align: center !important;
+		i {
+			padding-right: 1rem;
+		}
+	}
+}
+

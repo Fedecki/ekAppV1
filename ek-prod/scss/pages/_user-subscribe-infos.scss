@@ -1,0 +1,118 @@
+// USER SUBSCRIBE INFOS
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+/// 3. USER SUBSCRIBTION
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+.profileComplete {
+	display: block;
+	position: relative;
+	//height: 100%;
+	min-height: 100%;	
+	background: $ekleziaPrimary;
+
+
+	.ekLogo {
+		display: block;
+		padding: 1rem;
+		max-width: rem-calc(80);
+		max-height: auto;
+		margin: auto;
+	}
+
+	.profileCompleteWrapper {
+		
+		@media #{$medium-up} {			
+			//@include centre(both);
+		}	
+		h1 {
+			color: $white;
+			font-size: $h2-font-size;
+			margin-bottom: 2rem;
+			font-weight: 300;
+		}
+
+		form {
+			@include clearfix;
+			border: solid 1px $white;
+			display: block;
+			width: 80%;
+			margin: auto;
+			//position: relative;
+			font-weight: bold;
+			color: $white;
+			font-size: $h4-font-size !important;
+			
+			h5 {
+				text-align: center;
+				color: $white;
+				font-size: $h2-font-size;
+			}
+
+
+			label {
+				color: $white;
+			}
+
+			.mandatoryInfos {
+				@include grid-column(6);
+				@media #{$small-only} {			
+					@include grid-column(12);
+				}					
+			}
+
+			.userProfilePic {
+				@include grid-column(12);
+				img {
+					@include radius(50%);
+					width: 128px;
+					height: 128px;
+					display: block;
+					margin: auto;
+				}
+			}
+
+			.userCity {
+
+
+			}
+
+			.optionalInfos {
+				@include grid-column(6);
+				@media #{$small-only} {			
+					@include grid-column(12);
+				}	
+				.userGender {
+					@include block-grid(2);
+
+					.selectedGender {
+						background: darken($ekleziaPrimary, 5);
+						border: solid 4px darken($ekleziaPrimary, 10);
+					}
+					
+					li > span {
+						border: solid 4px $white;
+						@include radius(50%) ;
+						display: block;
+						margin: auto;
+						text-align: center;
+						position: relative;
+						width: rem-calc(116);
+						height: rem-calc(116);
+						max-width: rem-calc(128);
+						max-height: rem-calc(128);							
+						i {
+							font-size: 250%;
+							line-height: 250%;						
+						}
+						&:hover {
+							cursor: $cursor-pointer-value;
+							@extend .selectedGender;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
